@@ -27,25 +27,37 @@ Begin Window MainWindow
    Begin cCanvasButton cCanvasButton1
       Active          =   False
       AllowAutoDeactivate=   True
-      ArcHeight       =   50
-      ArcWidth        =   50
+      AllowFocus      =   False
+      AllowFocusRing  =   False
+      AllowTabs       =   False
+      ArcHeight       =   80
+      ArcWidth        =   80
       Backdrop        =   0
       ButtonStyle     =   1
       Cursor          =   7
-      DarkModeDownColor=   &c000000FF
-      DarkModeHoverColor=   &c000000FF
-      DarkModeHoverToggledColor=   &c000000FF
-      DarkModeNormalColor=   &c000000FF
-      DarkModeToggledColor=   &c000000FF
-      DownColor       =   &c00000065
+      DarkModeDownColor=   &cFFFFFF00
+      DarkModeDownPicture=   429174783
+      DarkModeHoverColor=   &cFFFFFF7F
+      DarkModeHoverPicture=   672114687
+      DarkModeHoverToggledColor=   &cFFFFFF37
+      DarkmodeHoverToggledPicture=   559138815
+      DarkModeNormalColor=   &cFFFFFFBE
+      DarkModeNormalPicture=   900487167
+      DarkModeToggledColor=   &cFFFFFF55
+      DarkModeToggledPicture=   559138815
+      DoubleBuffer    =   False
+      Down            =   True
+      DownColor       =   &c00000040
       DownMask        =   0
       DownPicture     =   672114687
       Enabled         =   True
       Height          =   100
-      HoverColor      =   &c00000098
+      Hover           =   False
+      HoverColor      =   &c0000007F
       HoverMask       =   0
-      HoverPicture    =   559138815
-      HoverToggledColor=   &c0000007F
+      HoverPicture    =   429174783
+      HoverToggled    =   False
+      HoverToggledColor=   &c00000065
       HoverToggledMask=   0
       HoverToggledPicture=   900487167
       Index           =   -2147483648
@@ -56,67 +68,21 @@ Begin Window MainWindow
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      NormalColor     =   &c000000C0
+      NormalColor     =   &c000000BF
       NormalMask      =   0
-      NormalPicture   =   429174783
+      NormalPicture   =   559138815
       Scope           =   0
       Status          =   "Normal"
       TabIndex        =   0
       TabPanelIndex   =   0
       TabStop         =   False
-      ToggledColor    =   &c00000099
+      Toggled         =   False
+      ToggledColor    =   &c0000007F
       ToggledMask     =   0
       ToggledPicture  =   1688094719
       Tooltip         =   ""
       Top             =   20
-      Visible         =   True
-      Width           =   100
-   End
-   Begin cCanvasButton cCanvasButton2
-      Active          =   False
-      AllowAutoDeactivate=   True
-      ArcHeight       =   0
-      ArcWidth        =   0
-      Backdrop        =   0
-      ButtonStyle     =   1
-      Cursor          =   7
-      DarkModeDownColor=   &c000000FF
-      DarkModeHoverColor=   &c000000FF
-      DarkModeHoverToggledColor=   &c000000FF
-      DarkModeNormalColor=   &c000000FF
-      DarkModeToggledColor=   &c000000FF
-      DownColor       =   &c9200FF00
-      DownMask        =   483098623
-      DownPicture     =   0
-      Enabled         =   True
-      Height          =   100
-      HoverColor      =   &c0066A800
-      HoverMask       =   483098623
-      HoverPicture    =   0
-      HoverToggledColor=   &cF1673200
-      HoverToggledMask=   483098623
-      HoverToggledPicture=   0
-      Index           =   -2147483648
-      InitialParent   =   ""
-      Left            =   132
-      LockBottom      =   False
-      LockedInPosition=   False
-      LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
-      NormalColor     =   &cA2330000
-      NormalMask      =   483098623
-      NormalPicture   =   0
-      Scope           =   0
-      Status          =   "Normal"
-      TabIndex        =   1
-      TabPanelIndex   =   0
-      TabStop         =   False
-      ToggledColor    =   &c00680000
-      ToggledMask     =   483098623
-      ToggledPicture  =   0
-      Tooltip         =   ""
-      Top             =   20
+      Transparent     =   False
       Visible         =   True
       Width           =   100
    End
@@ -133,6 +99,13 @@ End
 
 #tag EndWindowCode
 
+#tag Events cCanvasButton1
+	#tag Event
+		Sub Action()
+		  'MessageBox(Me.Active.ToString)
+		End Sub
+	#tag EndEvent
+#tag EndEvents
 #tag ViewBehavior
 	#tag ViewProperty
 		Name="Name"

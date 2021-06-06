@@ -3,7 +3,7 @@ Protected Class cCanvasButton
 Inherits Canvas
 	#tag Event
 		Function MouseDown(X As Integer, Y As Integer) As Boolean
-		  Me.Status= IconStatus.Down
+		  If Me.Down Then Me.Status= IconStatus.Down
 		  Me.Invalidate
 		  //Pass it to the MouseUp event
 		  Return True
@@ -20,10 +20,12 @@ Inherits Canvas
 		  End if
 		  
 		  If Me.Active Then
-		    Me.Status = IconStatus.HoverToggled
+		    If Me.HoverToggled Then Me.Status = IconStatus.HoverToggled
+		    If Me.Hover And Not Me.HoverToggled Then Me.Status = IconStatus.Hover
 		  Else
-		    Me.Status = IconStatus.Hover
-		  End if
+		    If Me.Hover Then Me.Status = IconStatus.Hover
+		  End If
+		  
 		  
 		  //Store the cursor for Exit
 		  Me.AppCursor = App.MouseCursor
@@ -37,9 +39,12 @@ Inherits Canvas
 
 	#tag Event
 		Sub MouseExit()
-		  
-		  If Me.Active = True Then
-		    Me.Status = IconStatus.Toggled
+		  If Me.Toggled Then
+		    If Me.Active = True Then
+		      Me.Status = IconStatus.Toggled
+		    Else
+		      Me.Status = IconStatus.Normal
+		    End if
 		  Else
 		    Me.Status = IconStatus.Normal
 		  End if
@@ -65,9 +70,13 @@ Inherits Canvas
 		    End if
 		    
 		    If Me.Active Then
-		      Me.Status = IconStatus.HoverToggled
+		      If Me.HoverToggled Then Me.Status = IconStatus.HoverToggled
+		      If Me.Hover And Not Me.HoverToggled Then Me.Status = IconStatus.Hover
 		    Else
-		      Me.Status = IconStatus.Hover
+		      
+		      If Me.Hover Then Me.Status = IconStatus.Hover
+		      
+		      
 		    End if
 		    RaiseEvent Action
 		    
@@ -102,37 +111,36 @@ Inherits Canvas
 		  Select Case Status
 		    
 		  Case IconStatus.Normal
-		    
 		    If Color.IsDarkMode Then
-		      p = Me.CreatePicture(Me.NormalPicture, Me.NormalMask, DarkModeNormalColor)
+		      p = Me.CreatePicture(Me.DarkModeNormalPicture, Me.NormalMask, DarkModeNormalColor)
 		    Else
 		      p = Me.CreatePicture(Me.NormalPicture, Me.NormalMask, NormalColor)
 		    End If
 		    
 		  Case IconStatus.Hover
 		    If Color.IsDarkMode Then
-		      p = Me.CreatePicture(Me.HoverPicture, Me.HoverMask, Me.DarkModeHoverColor)
+		      p = Me.CreatePicture(Me.DarkModeHoverPicture, Me.HoverMask, Me.DarkModeHoverColor)
 		    Else
 		      p = Me.CreatePicture(Me.HoverPicture, Me.HoverMask, Me.HoverColor)
 		    End if
 		    
 		  Case IconStatus.Down
 		    If Color.IsDarkMode Then
-		      p = Me.CreatePicture(Me.DownPicture, Me.DownMask, Me.DarkModeDownColor)
+		      p = Me.CreatePicture(Me.DarkModeDownPicture, Me.DownMask, Me.DarkModeDownColor)
 		    Else
 		      p = Me.CreatePicture(Me.DownPicture, Me.DownMask, Me.DownColor)
 		    End if
 		    
 		  Case IconStatus.Toggled
 		    If Color.IsDarkMode Then
-		      p = Me.CreatePicture(Me.ToggledPicture, Me.ToggledMask, Me.DarkModeToggledColor)
+		      p = Me.CreatePicture(Me.DarkModeToggledPicture, Me.ToggledMask, Me.DarkModeToggledColor)
 		    Else
 		      p = Me.CreatePicture(Me.ToggledPicture, Me.ToggledMask, Me.ToggledColor)
 		    End if
 		    
 		  Case IconStatus.HoverToggled
 		    If Color.IsDarkMode Then
-		      p = Me.CreatePicture(Me.HoverToggledPicture, Me.HoverToggledMask, Me.DarkModeHoverToggledColor)
+		      p = Me.CreatePicture(Me.DarkModeHoverToggledPicture, Me.HoverToggledMask, Me.DarkModeHoverToggledColor)
 		    Else
 		      p = Me.CreatePicture(Me.HoverToggledPicture, Me.HoverToggledMask, Me.HoverToggledColor)
 		    End if
@@ -254,7 +262,15 @@ Inherits Canvas
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
+		DarkModeDownPicture As Picture
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		DarkModeHoverColor As Color = &c000000FF
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		DarkModeHoverPicture As Picture
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
@@ -262,11 +278,27 @@ Inherits Canvas
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
+		DarkmodeHoverToggledPicture As Picture
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		DarkModeNormalColor As Color = &c000000FF
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
+		DarkModeNormalPicture As Picture
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		DarkModeToggledColor As Color = &c000000FF
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		DarkModeToggledPicture As Picture
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		Down As Boolean = True
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
@@ -279,6 +311,10 @@ Inherits Canvas
 
 	#tag Property, Flags = &h0
 		DownPicture As Picture
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		Hover As Boolean = True
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
@@ -295,6 +331,10 @@ Inherits Canvas
 
 	#tag Property, Flags = &h0
 		HoverPicture As Picture
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		HoverToggled As Boolean = True
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
@@ -323,6 +363,10 @@ Inherits Canvas
 
 	#tag Property, Flags = &h0
 		Status As IconStatus = IconStatus.Normal
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		Toggled As Boolean = True
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
@@ -557,6 +601,38 @@ Inherits Canvas
 			#tag EndEnumValues
 		#tag EndViewProperty
 		#tag ViewProperty
+			Name="Hover"
+			Visible=true
+			Group="Which Statuses"
+			InitialValue="True"
+			Type="Boolean"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="Down"
+			Visible=true
+			Group="Which Statuses"
+			InitialValue="True"
+			Type="Boolean"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="Toggled"
+			Visible=true
+			Group="Which Statuses"
+			InitialValue="True"
+			Type="Boolean"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="HoverToggled"
+			Visible=true
+			Group="Which Statuses"
+			InitialValue="True"
+			Type="Boolean"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
 			Name="Active"
 			Visible=true
 			Group="Initial State"
@@ -582,6 +658,14 @@ Inherits Canvas
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="NormalPicture"
+			Visible=true
+			Group="Normal"
+			InitialValue=""
+			Type="Picture"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="DarkModeNormalPicture"
 			Visible=true
 			Group="Normal"
 			InitialValue=""
@@ -621,6 +705,14 @@ Inherits Canvas
 			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
+			Name="DarkModeHoverPicture"
+			Visible=true
+			Group="Mouse Hover"
+			InitialValue=""
+			Type="Picture"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
 			Name="HoverMask"
 			Visible=true
 			Group="Mouse Hover"
@@ -646,6 +738,14 @@ Inherits Canvas
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="DownPicture"
+			Visible=true
+			Group="Mouse Down"
+			InitialValue=""
+			Type="Picture"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="DarkModeDownPicture"
 			Visible=true
 			Group="Mouse Down"
 			InitialValue=""
@@ -685,6 +785,14 @@ Inherits Canvas
 			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
+			Name="DarkModeToggledPicture"
+			Visible=true
+			Group="Toggled"
+			InitialValue=""
+			Type="Picture"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
 			Name="ToggledMask"
 			Visible=true
 			Group="Toggled"
@@ -710,6 +818,14 @@ Inherits Canvas
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="HoverToggledPicture"
+			Visible=true
+			Group="Hover Toggled"
+			InitialValue=""
+			Type="Picture"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="DarkmodeHoverToggledPicture"
 			Visible=true
 			Group="Hover Toggled"
 			InitialValue=""
