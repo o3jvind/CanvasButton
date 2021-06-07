@@ -3,7 +3,14 @@ Protected Class cCanvasButton
 Inherits Canvas
 	#tag Event
 		Function MouseDown(X As Integer, Y As Integer) As Boolean
-		  If Me.Down Then Me.Status= IconStatus.Down
+		  If Me.Active Then
+		    If Me.Down Then Me.Status = IconStatus.Down
+		    If Me.DownToggled Then Me.Status = IconStatus.DownToggled
+		  Else
+		    If Me.Down Then Me.Status = IconStatus.Down
+		  End if
+		  
+		  
 		  Me.Invalidate
 		  //Pass it to the MouseUp event
 		  Return True
@@ -72,10 +79,12 @@ Inherits Canvas
 		    If Me.Active Then
 		      If Me.HoverToggled Then Me.Status = IconStatus.HoverToggled
 		      If Me.Hover And Not Me.HoverToggled Then Me.Status = IconStatus.Hover
+		      If Not Me.Hover And Not Me.HoverToggled Then Me.Status = IconStatus.Normal
+		      If Me.Toggled And Not Me.Hover And Not Me.HoverToggled Then Me.Status = IconStatus.Toggled
 		    Else
 		      
 		      If Me.Hover Then Me.Status = IconStatus.Hover
-		      
+		      If Not Me.Hover Then Me.Status = IconStatus.Normal
 		      
 		    End if
 		    RaiseEvent Action
@@ -92,7 +101,7 @@ Inherits Canvas
 		  
 		  // Set the status
 		  If Me.Active Then
-		    Me.Status = IconStatus.Toggled
+		    If me.Toggled Then Me.Status = IconStatus.Toggled
 		  Else
 		    Me.Status = IconStatus.Normal
 		  End if
@@ -144,6 +153,14 @@ Inherits Canvas
 		    Else
 		      p = Me.CreatePicture(Me.HoverToggledPicture, Me.HoverToggledMask, Me.HoverToggledColor)
 		    End if
+		    
+		  Case IconStatus.DownToggled
+		    If Color.IsDarkMode Then
+		      p = Me.CreatePicture(Me.DarkModeDownToggledPicture, Me.DownToggledMask, Me.DarkModeDownToggledColor)
+		    Else
+		      p = Me.CreatePicture(Me.DownToggledPicture, Me.DownToggledMask, Me.DownToggledColor)
+		    End if
+		    
 		  End Select
 		  
 		  
@@ -266,6 +283,14 @@ Inherits Canvas
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
+		DarkModeDownToggledColor As Color = &c000000FF
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		DarkModeDownToggledPicture As Picture
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		DarkModeHoverColor As Color = &c000000FF
 	#tag EndProperty
 
@@ -311,6 +336,22 @@ Inherits Canvas
 
 	#tag Property, Flags = &h0
 		DownPicture As Picture
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		DownToggled As Boolean = True
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		DownToggledColor As Color = &c000000FF
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		DownToggledMask As Picture
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		DownToggledPicture As Picture
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
@@ -387,7 +428,8 @@ Inherits Canvas
 		  Hover
 		  Down
 		  Toggled
-		HoverToggled
+		  HoverToggled
+		DownToggled
 	#tag EndEnum
 
 
@@ -533,6 +575,7 @@ Inherits Canvas
 				"2 - Down"
 				"3 - Toggled"
 				"4 - HoverToggled"
+				"5 - DownToggled"
 			#tag EndEnumValues
 		#tag EndViewProperty
 		#tag ViewProperty
@@ -633,11 +676,59 @@ Inherits Canvas
 			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
+			Name="DownToggled"
+			Visible=true
+			Group="Which Statuses"
+			InitialValue="True"
+			Type="Boolean"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
 			Name="Active"
 			Visible=true
 			Group="Initial State"
 			InitialValue="False"
 			Type="Boolean"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="DownToggledColor"
+			Visible=true
+			Group="Down Toggled"
+			InitialValue="&c000000FF"
+			Type="Color"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="DarkModeDownToggledColor"
+			Visible=true
+			Group="Down Toggled"
+			InitialValue="&c000000FF"
+			Type="Color"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="DownToggledPicture"
+			Visible=true
+			Group="Down Toggled"
+			InitialValue=""
+			Type="Picture"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="DarkModeDownToggledPicture"
+			Visible=true
+			Group="Down Toggled"
+			InitialValue=""
+			Type="Picture"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="DownToggledMask"
+			Visible=true
+			Group="Down Toggled"
+			InitialValue=""
+			Type="Picture"
 			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
