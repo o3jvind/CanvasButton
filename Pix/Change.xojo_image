@@ -7,11 +7,11 @@ Image Change
 		#tag ImageSpecification
 			Comment = 
 			Device = 31
-			HSize = 80.00
+			HSize = 36.00
 			Orientation = Any
 			Platform = 15
 			PPI = 72
-			VSize = 20.00
+			VSize = 30.00
 		#tag EndImageSpecification
 	#tag EndImageRepresentation
 	#tag ImageRepresentation
@@ -21,22 +21,22 @@ Image Change
 		#tag ImageSpecification
 			Comment = 
 			Device = 31
-			HSize = 80.00
+			HSize = 36.00
 			Orientation = Any
 			Platform = 15
 			PPI = 144
-			VSize = 20.00
+			VSize = 30.00
 		#tag EndImageSpecification
 	#tag EndImageRepresentation
 	#tag ImageRepresentation
 		#tag ImageSpecification
 			Comment = 
 			Device = 31
-			HSize = 80.00
+			HSize = 36.00
 			Orientation = Any
 			Platform = 15
 			PPI = 216
-			VSize = 20.00
+			VSize = 30.00
 		#tag EndImageSpecification
 	#tag EndImageRepresentation
 End Image

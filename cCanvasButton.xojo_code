@@ -6,8 +6,10 @@ Inherits Canvas
 		  If Me.Active Then
 		    If Me.Down Then Me.Status = IconStatus.Down
 		    If Me.DownToggled Then Me.Status = IconStatus.DownToggled
+		    If Not Me.Down And Not Me.DownToggled Then Me.Status = IconStatus.Normal
 		  Else
 		    If Me.Down Then Me.Status = IconStatus.Down
+		    If Not Me.Down Then Me.Status = IconStatus.Normal
 		  End if
 		  
 		  
@@ -27,12 +29,13 @@ Inherits Canvas
 		  End if
 		  
 		  If Me.Active Then
+		    If Me.Hover Then Me.Status = IconStatus.Hover
 		    If Me.HoverToggled Then Me.Status = IconStatus.HoverToggled
-		    If Me.Hover And Not Me.HoverToggled Then Me.Status = IconStatus.Hover
+		    If Not Me.Hover And Not Me.HoverToggled Then Me.Status = IconStatus.Normal
 		  Else
 		    If Me.Hover Then Me.Status = IconStatus.Hover
+		    If Not Me.Hover Then Me.Status = IconStatus.Normal
 		  End If
-		  
 		  
 		  //Store the cursor for Exit
 		  Me.AppCursor = App.MouseCursor
@@ -46,12 +49,8 @@ Inherits Canvas
 
 	#tag Event
 		Sub MouseExit()
-		  If Me.Toggled Then
-		    If Me.Active = True Then
-		      Me.Status = IconStatus.Toggled
-		    Else
-		      Me.Status = IconStatus.Normal
-		    End if
+		  If Me.Active = True And Me.Toggled Then
+		    Me.Status = IconStatus.Toggled
 		  Else
 		    Me.Status = IconStatus.Normal
 		  End if
@@ -77,19 +76,17 @@ Inherits Canvas
 		    End if
 		    
 		    If Me.Active Then
+		      If Me.Hover Then Me.Status = IconStatus.Hover
 		      If Me.HoverToggled Then Me.Status = IconStatus.HoverToggled
-		      If Me.Hover And Not Me.HoverToggled Then Me.Status = IconStatus.Hover
 		      If Not Me.Hover And Not Me.HoverToggled Then Me.Status = IconStatus.Normal
-		      If Me.Toggled And Not Me.Hover And Not Me.HoverToggled Then Me.Status = IconStatus.Toggled
 		    Else
-		      
 		      If Me.Hover Then Me.Status = IconStatus.Hover
 		      If Not Me.Hover Then Me.Status = IconStatus.Normal
-		      
 		    End if
-		    RaiseEvent Action
 		    
 		    Me.Invalidate
+		    
+		    RaiseEvent Action
 		  End If
 		  
 		End Sub
@@ -97,8 +94,6 @@ Inherits Canvas
 
 	#tag Event
 		Sub Open()
-		  
-		  
 		  // Set the status
 		  If Me.Active Then
 		    If me.Toggled Then Me.Status = IconStatus.Toggled
