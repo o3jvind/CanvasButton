@@ -641,7 +641,7 @@ Inherits Canvas
 		#tag ViewProperty
 			Name="Hover"
 			Visible=true
-			Group="Which Statuses"
+			Group="Features"
 			InitialValue="True"
 			Type="Boolean"
 			EditorType=""
@@ -649,7 +649,7 @@ Inherits Canvas
 		#tag ViewProperty
 			Name="Down"
 			Visible=true
-			Group="Which Statuses"
+			Group="Features"
 			InitialValue="True"
 			Type="Boolean"
 			EditorType=""
@@ -657,7 +657,7 @@ Inherits Canvas
 		#tag ViewProperty
 			Name="Toggled"
 			Visible=true
-			Group="Which Statuses"
+			Group="Features"
 			InitialValue="True"
 			Type="Boolean"
 			EditorType=""
@@ -665,7 +665,7 @@ Inherits Canvas
 		#tag ViewProperty
 			Name="HoverToggled"
 			Visible=true
-			Group="Which Statuses"
+			Group="Features"
 			InitialValue="True"
 			Type="Boolean"
 			EditorType=""
@@ -673,7 +673,7 @@ Inherits Canvas
 		#tag ViewProperty
 			Name="DownToggled"
 			Visible=true
-			Group="Which Statuses"
+			Group="Features"
 			InitialValue="True"
 			Type="Boolean"
 			EditorType=""

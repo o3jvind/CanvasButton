@@ -74,7 +74,7 @@ Begin Window MainWindow
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      NormalColor     =   &c000000BF
+      NormalColor     =   &cC7C8C700
       NormalMask      =   0
       NormalPicture   =   1688094719
       Scope           =   0
@@ -1311,7 +1311,7 @@ Begin Window MainWindow
       DownToggledMask =   0
       DownToggledPicture=   0
       Enabled         =   True
-      Height          =   30
+      Height          =   34
       Hover           =   True
       HoverColor      =   &cC8000000
       HoverMask       =   1921011711
@@ -1341,7 +1341,7 @@ Begin Window MainWindow
       ToggledMask     =   0
       ToggledPicture  =   0
       Tooltip         =   ""
-      Top             =   524
+      Top             =   520
       Transparent     =   False
       Visible         =   True
       Width           =   36
@@ -1657,6 +1657,13 @@ Begin Window MainWindow
       ValidationMask  =   "####"
       Visible         =   True
       Width           =   40
+   End
+   Begin DesktopColorPicker BGColorPicker
+      HasAlpha        =   True
+      Index           =   -2147483648
+      LockedInPosition=   False
+      Scope           =   0
+      TabPanelIndex   =   0
    End
 End
 #tag EndWindow
@@ -2141,29 +2148,46 @@ End
 #tag Events cCanvasButton3
 	#tag Event
 		Sub Action()
+		  'If ColorPropertyPopupMenu.SelectedRowIndex > 0 Then
+		  'Var c  As Color
+		  'Var b As Boolean
+		  'c = Me.NormalColor // choose the default color shown in color picker
+		  'Call Color.SelectedFromDialog(c, "Select a Color")
+		  '
+		  '
+		  'Var myProperties() As Introspection.PropertyInfo = Introspection.GetType(cCanvasButton1).GetProperties
+		  'Var ColorProp As String = ColorPropertyPopupMenu.SelectedRow
+		  'For Each prop As Introspection.PropertyInfo In myProperties
+		  '
+		  'if prop.Name = ColorProp then //found the property to change
+		  'prop.Value(cCanvasButton1) = c
+		  'Exit
+		  'End if
+		  'Next
+		  '
+		  '
+		  '
+		  'ColorPropertyPopupMenu.SelectedRowIndex = 0
+		  'cCanvasButton1.Invalidate
+		  'Else
+		  'MessageBox("Please select a Color Property :)")
+		  '
+		  'End if
+		  '
+		  'ColorPicker1.Show(c, "Select Color")
+		  
 		  If ColorPropertyPopupMenu.SelectedRowIndex > 0 Then
 		    Var c  As Color
-		    Var b As Boolean
-		    c = Me.NormalColor // choose the default color shown in color picker
-		    Call Color.SelectedFromDialog(c, "Select a Color")
-		    
-		    
 		    Var myProperties() As Introspection.PropertyInfo = Introspection.GetType(cCanvasButton1).GetProperties
 		    Var ColorProp As String = ColorPropertyPopupMenu.SelectedRow
 		    For Each prop As Introspection.PropertyInfo In myProperties
 		      
 		      if prop.Name = ColorProp then //found the property to change
-		        prop.Value(cCanvasButton1) = c
+		        c = prop.Value(cCanvasButton1)
 		        Exit
 		      End if
 		    Next
-		    
-		    
-		    
-		    ColorPropertyPopupMenu.SelectedRowIndex = 0
-		    cCanvasButton1.Invalidate
-		  Else
-		    MessageBox("Please select a Color Property :)")
+		    BGColorPicker.Show(c, "Select Color")
 		    
 		  End if
 		End Sub
@@ -2225,6 +2249,25 @@ End
 		  If Self.AllSet Then
 		    cCanvasButton1.Height = Me.Text.Val
 		    cCanvasButton1.Invalidate
+		  End if
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events BGColorPicker
+	#tag Event
+		Sub ColorSelected(selectedColor As Color)
+		  If ColorPropertyPopupMenu.SelectedRowIndex > 0 Then
+		    Var myProperties() As Introspection.PropertyInfo = Introspection.GetType(cCanvasButton1).GetProperties
+		    Var ColorProp As String = ColorPropertyPopupMenu.SelectedRow
+		    For Each prop As Introspection.PropertyInfo In myProperties
+		      
+		      if prop.Name = ColorProp then //found the property to change
+		        prop.Value(cCanvasButton1) = selectedColor
+		        cCanvasButton1.Invalidate
+		        Exit
+		      End if
+		    Next
+		    
 		  End if
 		End Sub
 	#tag EndEvent
