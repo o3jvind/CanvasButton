@@ -48,7 +48,6 @@ DefaultEncoding=&h0
 AppIcon=CanvasButton.xojo_resources;&h0
 OSXBundleID=dk.o3jvind.alphabutton
 DebuggerCommandLine=
-DebuggerDestination=/Users/O3JVIND/Downloads
 UseGDIPlus=False
 UseBuildsFolder=True
 HiDPI=True

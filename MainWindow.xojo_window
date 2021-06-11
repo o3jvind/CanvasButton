@@ -2145,35 +2145,20 @@ End
 		    Var c  As Color
 		    Var b As Boolean
 		    c = Me.NormalColor // choose the default color shown in color picker
-		    b = Color.SelectedFromDialog(c, "Select a Color")
+		    Call Color.SelectedFromDialog(c, "Select a Color")
 		    
-		    Select Case ColorPropertyPopupMenu.SelectedRow
-		    case "DarkModeDownColor"
-		      cCanvasButton1.DarkModeDownColor = c
-		    Case "DarkModeDownToggledColor"
-		      cCanvasButton1.DarkModeDownToggledColor = c
-		    Case "DarkModeHoverColor"
-		      cCanvasButton1.DarkModeHoverColor = c
-		    Case "DarkModeHoverToggledColor"
-		      cCanvasButton1.DarkModeHoverToggledColor = c
-		    Case "DarkModeNormalColor"
-		      cCanvasButton1.DarkModeNormalColor = c
-		    Case "DarkModeToggledColor"
-		      cCanvasButton1.DarkModeToggledColor = c
-		    Case "DownColor"
-		      cCanvasButton1.DownColor = c
-		    Case "DownToggledColor"
-		      cCanvasButton1.DownToggledColor = c
-		    Case "HoverColor"
-		      cCanvasButton1.HoverColor = c
-		    Case "HoverToggledColor"
-		      cCanvasButton1.HoverToggledColor = c
-		    Case "NormalColor"
-		      cCanvasButton1.NormalColor = c
-		    Case "ToggledColor"
-		      cCanvasButton1.ToggledColor = c
+		    
+		    Var myProperties() As Introspection.PropertyInfo = Introspection.GetType(cCanvasButton1).GetProperties
+		    Var ColorProp As String = ColorPropertyPopupMenu.SelectedRow
+		    For Each prop As Introspection.PropertyInfo In myProperties
 		      
-		    End Select
+		      if prop.Name = ColorProp then //found the property to change
+		        prop.Value(cCanvasButton1) = c
+		        Exit
+		      End if
+		    Next
+		    
+		    
 		    
 		    ColorPropertyPopupMenu.SelectedRowIndex = 0
 		    cCanvasButton1.Invalidate
