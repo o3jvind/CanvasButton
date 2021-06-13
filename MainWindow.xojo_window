@@ -7,10 +7,10 @@ Begin Window MainWindow
    FullScreen      =   False
    HasBackgroundColor=   False
    HasCloseButton  =   True
-   HasFullScreenButton=   True
-   HasMaximizeButton=   True
-   HasMinimizeButton=   True
-   Height          =   574
+   HasFullScreenButton=   False
+   HasMaximizeButton=   False
+   HasMinimizeButton=   False
+   Height          =   685
    ImplicitInstance=   True
    MacProcID       =   0
    MaximumHeight   =   32000
@@ -19,12 +19,12 @@ Begin Window MainWindow
    MenuBarVisible  =   True
    MinimumHeight   =   64
    MinimumWidth    =   64
-   Resizeable      =   True
+   Resizeable      =   False
    Title           =   "Canvas Button"
    Type            =   0
    Visible         =   True
    Width           =   499
-   Begin cCanvasButton cCanvasButton1
+   Begin cCanvasButton PreviewCCBtn
       Active          =   False
       AllowAutoDeactivate=   True
       AllowFocus      =   False
@@ -34,49 +34,50 @@ Begin Window MainWindow
       ArcWidth        =   60
       Backdrop        =   0
       ButtonStyle     =   1
-      Cursor          =   7
       DarkModeDownColor=   &cFFFFFF00
-      DarkModeDownPicture=   900487167
+      DarkModeDownPicture=   339718143
       DarkModeDownToggledColor=   &cFFFFFF1A
-      DarkModeDownToggledPicture=   483098623
-      DarkModeHoverColor=   &cFFFFFF7F
-      DarkModeHoverPicture=   559138815
+      DarkModeDownToggledPicture=   1862529023
+      DarkModeHoverColor=   &c74B80000
+      DarkModeHoverPicture=   418928639
       DarkModeHoverToggledColor=   &cFFFFFF37
-      DarkmodeHoverToggledPicture=   1040302079
-      DarkModeNormalColor=   &cFFFFFFBE
-      DarkModeNormalPicture=   1688094719
+      DarkmodeHoverToggledPicture=   1609400319
+      DarkModeNormalColor=   &cFFFFFF00
+      DarkModeNormalPicture=   150888447
       DarkModeToggledColor=   &cFFFFFF55
-      DarkModeToggledPicture=   429174783
+      DarkModeToggledPicture=   1102772223
       DoubleBuffer    =   False
       Down            =   True
       DownColor       =   &c00000040
+      DownCursor      =   7
       DownMask        =   0
-      DownPicture     =   900487167
+      DownPicture     =   339718143
       DownToggled     =   True
       DownToggledColor=   &c0000003F
       DownToggledMask =   0
-      DownToggledPicture=   483098623
+      DownToggledPicture=   1862529023
       Enabled         =   True
       Height          =   100
       Hover           =   True
       HoverColor      =   &c0000007F
+      HoverCursor     =   6
       HoverMask       =   0
-      HoverPicture    =   559138815
+      HoverPicture    =   418928639
       HoverToggled    =   True
       HoverToggledColor=   &c00000065
       HoverToggledMask=   0
-      HoverToggledPicture=   1040302079
+      HoverToggledPicture=   1609400319
       Index           =   -2147483648
       InitialParent   =   ""
-      Left            =   20
+      Left            =   18
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      NormalColor     =   &cC7C8C700
+      NormalColor     =   &c7F7F7FCA
       NormalMask      =   0
-      NormalPicture   =   1688094719
+      NormalPicture   =   150888447
       Scope           =   0
       Status          =   "Normal"
       TabIndex        =   0
@@ -85,14 +86,14 @@ Begin Window MainWindow
       Toggled         =   True
       ToggledColor    =   &c0000007F
       ToggledMask     =   0
-      ToggledPicture  =   429174783
+      ToggledPicture  =   1102772223
       Tooltip         =   ""
       Top             =   20
       Transparent     =   False
       Visible         =   True
       Width           =   100
    End
-   Begin Label Label1
+   Begin Label ArcWidthLbl
       AllowAutoDeactivate=   True
       Bold            =   False
       DataField       =   ""
@@ -105,7 +106,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   28
+      Left            =   355
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -121,13 +122,13 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   147
+      Top             =   68
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   100
+      Width           =   72
    End
-   Begin Label Label2
+   Begin Label ArcHeightLbl
       AllowAutoDeactivate=   True
       Bold            =   False
       DataField       =   ""
@@ -140,7 +141,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   28
+      Left            =   355
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -156,13 +157,13 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   181
+      Top             =   98
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   100
+      Width           =   72
    End
-   Begin Label Label3
+   Begin Label ButtonStyleLbl
       AllowAutoDeactivate=   True
       Bold            =   False
       DataField       =   ""
@@ -175,7 +176,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   28
+      Left            =   154
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -191,13 +192,13 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   213
+      Top             =   197
       Transparent     =   False
       Underline       =   False
       Visible         =   True
       Width           =   100
    End
-   Begin Label Label4
+   Begin Label HCursorLbl
       AllowAutoDeactivate=   True
       Bold            =   False
       DataField       =   ""
@@ -210,7 +211,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   28
+      Left            =   154
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -222,17 +223,17 @@ Begin Window MainWindow
       TabIndex        =   19
       TabPanelIndex   =   0
       TabStop         =   True
-      Text            =   "Hover Cursor:"
+      Text            =   """Hover"" Cursor:"
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   245
+      Top             =   229
       Transparent     =   False
       Underline       =   False
       Visible         =   True
       Width           =   100
    End
-   Begin TextField TextField1
+   Begin TextField ArcWidthTxtFld
       AllowAutoDeactivate=   True
       AllowFocusRing  =   True
       AllowSpellChecking=   False
@@ -269,14 +270,14 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   147
+      Top             =   66
       Transparent     =   False
       Underline       =   False
       ValidationMask  =   "####"
       Visible         =   True
       Width           =   40
    End
-   Begin TextField TextField2
+   Begin TextField ArcHeightTxtFld
       AllowAutoDeactivate=   True
       AllowFocusRing  =   True
       AllowSpellChecking=   False
@@ -313,7 +314,7 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   179
+      Top             =   98
       Transparent     =   False
       Underline       =   False
       ValidationMask  =   "####"
@@ -334,7 +335,7 @@ Begin Window MainWindow
       InitialParent   =   ""
       InitialValue    =   ""
       Italic          =   False
-      Left            =   250
+      Left            =   266
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -346,13 +347,13 @@ Begin Window MainWindow
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
-      Top             =   213
+      Top             =   197
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   229
+      Width           =   213
    End
-   Begin PopupMenu CursorPopupMenu
+   Begin PopupMenu HCursorPopupMenu
       AllowAutoDeactivate=   True
       Bold            =   False
       DataField       =   ""
@@ -366,7 +367,7 @@ Begin Window MainWindow
       InitialParent   =   ""
       InitialValue    =   ""
       Italic          =   False
-      Left            =   250
+      Left            =   266
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -378,13 +379,13 @@ Begin Window MainWindow
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
-      Top             =   245
+      Top             =   229
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   229
+      Width           =   213
    End
-   Begin cCanvasButton DownSlider
+   Begin cCanvasButton EnableDownStatusCCBtn
       Active          =   False
       AllowAutoDeactivate=   True
       AllowFocus      =   False
@@ -394,7 +395,6 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   1
-      Cursor          =   7
       DarkModeDownColor=   &cFF890000
       DarkModeDownPicture=   0
       DarkModeDownToggledColor=   &cC7C8C700
@@ -410,6 +410,7 @@ Begin Window MainWindow
       DoubleBuffer    =   False
       Down            =   True
       DownColor       =   &cFF890000
+      DownCursor      =   6
       DownMask        =   1810081791
       DownPicture     =   0
       DownToggled     =   True
@@ -420,6 +421,7 @@ Begin Window MainWindow
       Height          =   24
       Hover           =   False
       HoverColor      =   &cC7C8C700
+      HoverCursor     =   6
       HoverMask       =   1589739519
       HoverPicture    =   0
       HoverToggled    =   True
@@ -447,7 +449,7 @@ Begin Window MainWindow
       ToggledMask     =   1810081791
       ToggledPicture  =   0
       Tooltip         =   ""
-      Top             =   321
+      Top             =   385
       Transparent     =   False
       Visible         =   True
       Width           =   40
@@ -466,7 +468,7 @@ Begin Window MainWindow
       InitialParent   =   ""
       InitialValue    =   ""
       Italic          =   False
-      Left            =   231
+      Left            =   266
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -478,13 +480,13 @@ Begin Window MainWindow
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
-      Top             =   486
+      Top             =   592
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   206
+      Width           =   161
    End
-   Begin Label Label5
+   Begin Label EnableDownStatusLbl
       AllowAutoDeactivate=   True
       Bold            =   False
       DataField       =   ""
@@ -497,7 +499,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   28
+      Left            =   53
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -513,13 +515,13 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   325
+      Top             =   389
       Transparent     =   False
       Underline       =   False
       Visible         =   True
       Width           =   201
    End
-   Begin cCanvasButton HoverSlider
+   Begin cCanvasButton EnableHoverStatusCCBtn
       Active          =   False
       AllowAutoDeactivate=   True
       AllowFocus      =   False
@@ -529,7 +531,6 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   1
-      Cursor          =   7
       DarkModeDownColor=   &cC8000000
       DarkModeDownPicture=   0
       DarkModeDownToggledColor=   &cC7C8C700
@@ -545,6 +546,7 @@ Begin Window MainWindow
       DoubleBuffer    =   False
       Down            =   True
       DownColor       =   &cC8000000
+      DownCursor      =   6
       DownMask        =   1810081791
       DownPicture     =   0
       DownToggled     =   True
@@ -555,6 +557,7 @@ Begin Window MainWindow
       Height          =   24
       Hover           =   False
       HoverColor      =   &cC7C8C700
+      HoverCursor     =   6
       HoverMask       =   1589739519
       HoverPicture    =   0
       HoverToggled    =   True
@@ -582,12 +585,12 @@ Begin Window MainWindow
       ToggledMask     =   1810081791
       ToggledPicture  =   0
       Tooltip         =   ""
-      Top             =   285
+      Top             =   349
       Transparent     =   False
       Visible         =   True
       Width           =   40
    End
-   Begin Label Label6
+   Begin Label EnableHoverStatusLbl
       AllowAutoDeactivate=   True
       Bold            =   False
       DataField       =   ""
@@ -600,7 +603,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   28
+      Left            =   53
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -616,13 +619,13 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   289
+      Top             =   353
       Transparent     =   False
       Underline       =   False
       Visible         =   True
       Width           =   201
    End
-   Begin cCanvasButton ToggledSlider
+   Begin cCanvasButton EnableToggledCCBtn
       Active          =   False
       AllowAutoDeactivate=   True
       AllowFocus      =   False
@@ -632,7 +635,6 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   1
-      Cursor          =   7
       DarkModeDownColor=   &c00B30000
       DarkModeDownPicture=   0
       DarkModeDownToggledColor=   &cC7C8C700
@@ -648,6 +650,7 @@ Begin Window MainWindow
       DoubleBuffer    =   False
       Down            =   True
       DownColor       =   &c00B30000
+      DownCursor      =   6
       DownMask        =   1810081791
       DownPicture     =   0
       DownToggled     =   True
@@ -658,6 +661,7 @@ Begin Window MainWindow
       Height          =   24
       Hover           =   False
       HoverColor      =   &cC7C8C700
+      HoverCursor     =   6
       HoverMask       =   1589739519
       HoverPicture    =   0
       HoverToggled    =   True
@@ -685,12 +689,12 @@ Begin Window MainWindow
       ToggledMask     =   1810081791
       ToggledPicture  =   0
       Tooltip         =   ""
-      Top             =   357
+      Top             =   421
       Transparent     =   False
       Visible         =   True
       Width           =   40
    End
-   Begin Label Label7
+   Begin Label EnableToggledLbl
       AllowAutoDeactivate=   True
       Bold            =   False
       DataField       =   ""
@@ -703,7 +707,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   28
+      Left            =   53
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -719,13 +723,13 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   361
+      Top             =   425
       Transparent     =   False
       Underline       =   False
       Visible         =   True
       Width           =   201
    End
-   Begin Label Label8
+   Begin Label EnableHoverToggledLbl
       AllowAutoDeactivate=   True
       Bold            =   False
       DataField       =   ""
@@ -738,7 +742,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   28
+      Left            =   53
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -754,13 +758,13 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   397
+      Top             =   461
       Transparent     =   False
       Underline       =   False
       Visible         =   True
       Width           =   201
    End
-   Begin Label Label9
+   Begin Label EnableDownToggledLbl
       AllowAutoDeactivate=   True
       Bold            =   False
       DataField       =   ""
@@ -773,7 +777,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   28
+      Left            =   53
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -789,13 +793,13 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   433
+      Top             =   501
       Transparent     =   False
       Underline       =   False
       Visible         =   True
       Width           =   201
    End
-   Begin cCanvasButton ActiveSlider
+   Begin cCanvasButton ActiveCCBtn
       Active          =   False
       AllowAutoDeactivate=   True
       AllowFocus      =   False
@@ -805,7 +809,6 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   1
-      Cursor          =   7
       DarkModeDownColor=   &c00B30000
       DarkModeDownPicture=   0
       DarkModeDownToggledColor=   &cC7C8C700
@@ -821,6 +824,7 @@ Begin Window MainWindow
       DoubleBuffer    =   False
       Down            =   True
       DownColor       =   &c00B30000
+      DownCursor      =   6
       DownMask        =   1810081791
       DownPicture     =   0
       DownToggled     =   True
@@ -831,6 +835,7 @@ Begin Window MainWindow
       Height          =   24
       Hover           =   False
       HoverColor      =   &cC7C8C700
+      HoverCursor     =   6
       HoverMask       =   1589739519
       HoverPicture    =   0
       HoverToggled    =   True
@@ -858,12 +863,12 @@ Begin Window MainWindow
       ToggledMask     =   1810081791
       ToggledPicture  =   0
       Tooltip         =   ""
-      Top             =   96
+      Top             =   142
       Transparent     =   False
       Visible         =   True
       Width           =   40
    End
-   Begin Label Label10
+   Begin Label ActiveLbl
       AllowAutoDeactivate=   True
       Bold            =   False
       DataField       =   ""
@@ -876,7 +881,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   372
+      Left            =   199
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -888,17 +893,17 @@ Begin Window MainWindow
       TabIndex        =   12
       TabPanelIndex   =   0
       TabStop         =   True
-      Text            =   "Active"
+      Text            =   "Active:"
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   100
+      Top             =   146
       Transparent     =   False
       Underline       =   False
       Visible         =   True
       Width           =   55
    End
-   Begin cCanvasButton EnabledSlider
+   Begin cCanvasButton EnabledCCBtn
       Active          =   False
       AllowAutoDeactivate=   True
       AllowFocus      =   False
@@ -908,7 +913,6 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   1
-      Cursor          =   7
       DarkModeDownColor=   &c0950FF00
       DarkModeDownPicture=   0
       DarkModeDownToggledColor=   &cC7C8C700
@@ -924,6 +928,7 @@ Begin Window MainWindow
       DoubleBuffer    =   False
       Down            =   True
       DownColor       =   &c0950FF00
+      DownCursor      =   6
       DownMask        =   1810081791
       DownPicture     =   0
       DownToggled     =   True
@@ -934,6 +939,7 @@ Begin Window MainWindow
       Height          =   24
       Hover           =   False
       HoverColor      =   &cC7C8C700
+      HoverCursor     =   6
       HoverMask       =   1589739519
       HoverPicture    =   0
       HoverToggled    =   True
@@ -961,12 +967,12 @@ Begin Window MainWindow
       ToggledMask     =   1810081791
       ToggledPicture  =   0
       Tooltip         =   ""
-      Top             =   60
+      Top             =   313
       Transparent     =   False
       Visible         =   True
       Width           =   40
    End
-   Begin Label Label11
+   Begin Label EnabledLbl
       AllowAutoDeactivate=   True
       Bold            =   False
       DataField       =   ""
@@ -979,7 +985,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   372
+      Left            =   146
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -991,15 +997,15 @@ Begin Window MainWindow
       TabIndex        =   6
       TabPanelIndex   =   0
       TabStop         =   True
-      Text            =   "Enabled"
+      Text            =   "Button Enabled:"
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   64
+      Top             =   317
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   55
+      Width           =   108
    End
    Begin Timer ActiveTimer
       Enabled         =   True
@@ -1024,7 +1030,7 @@ Begin Window MainWindow
       InitialParent   =   ""
       InitialValue    =   ""
       Italic          =   False
-      Left            =   18
+      Left            =   20
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1036,13 +1042,13 @@ Begin Window MainWindow
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
-      Top             =   486
+      Top             =   594
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   201
+      Width           =   234
    End
-   Begin cCanvasButton cCanvasButton2
+   Begin cCanvasButton PictureCCBtn
       Active          =   False
       AllowAutoDeactivate=   True
       AllowFocus      =   False
@@ -1052,7 +1058,6 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   0
-      Cursor          =   7
       DarkModeDownColor=   &c000000FF
       DarkModeDownPicture=   0
       DarkModeDownToggledColor=   &c000000FF
@@ -1068,6 +1073,7 @@ Begin Window MainWindow
       DoubleBuffer    =   False
       Down            =   True
       DownColor       =   &cC8000000
+      DownCursor      =   6
       DownMask        =   1199398911
       DownPicture     =   0
       DownToggled     =   False
@@ -1078,6 +1084,7 @@ Begin Window MainWindow
       Height          =   30
       Hover           =   True
       HoverColor      =   &cC8000000
+      HoverCursor     =   6
       HoverMask       =   1199398911
       HoverPicture    =   0
       HoverToggled    =   False
@@ -1105,12 +1112,12 @@ Begin Window MainWindow
       ToggledMask     =   0
       ToggledPicture  =   0
       Tooltip         =   ""
-      Top             =   483
+      Top             =   587
       Transparent     =   False
       Visible         =   True
       Width           =   36
    End
-   Begin cCanvasButton HoverToggledSlider
+   Begin cCanvasButton EnableHoverToggledCCBtn
       Active          =   False
       AllowAutoDeactivate=   True
       AllowFocus      =   False
@@ -1120,7 +1127,6 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   1
-      Cursor          =   7
       DarkModeDownColor=   &cDB00FF00
       DarkModeDownPicture=   0
       DarkModeDownToggledColor=   &cC7C8C700
@@ -1136,6 +1142,7 @@ Begin Window MainWindow
       DoubleBuffer    =   False
       Down            =   True
       DownColor       =   &cDB00FF00
+      DownCursor      =   6
       DownMask        =   1810081791
       DownPicture     =   0
       DownToggled     =   True
@@ -1146,6 +1153,7 @@ Begin Window MainWindow
       Height          =   24
       Hover           =   False
       HoverColor      =   &cC7C8C700
+      HoverCursor     =   6
       HoverMask       =   1589739519
       HoverPicture    =   0
       HoverToggled    =   True
@@ -1173,12 +1181,12 @@ Begin Window MainWindow
       ToggledMask     =   1810081791
       ToggledPicture  =   0
       Tooltip         =   ""
-      Top             =   393
+      Top             =   457
       Transparent     =   False
       Visible         =   True
       Width           =   40
    End
-   Begin cCanvasButton DownToggledSlider
+   Begin cCanvasButton EnableDownToggledCCBtn
       Active          =   False
       AllowAutoDeactivate=   True
       AllowFocus      =   False
@@ -1188,7 +1196,6 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   1
-      Cursor          =   7
       DarkModeDownColor=   &c00000000
       DarkModeDownPicture=   0
       DarkModeDownToggledColor=   &cC7C8C700
@@ -1204,6 +1211,7 @@ Begin Window MainWindow
       DoubleBuffer    =   False
       Down            =   True
       DownColor       =   &c00000000
+      DownCursor      =   6
       DownMask        =   1810081791
       DownPicture     =   0
       DownToggled     =   True
@@ -1214,6 +1222,7 @@ Begin Window MainWindow
       Height          =   24
       Hover           =   False
       HoverColor      =   &cC7C8C700
+      HoverCursor     =   6
       HoverMask       =   1589739519
       HoverPicture    =   0
       HoverToggled    =   True
@@ -1241,7 +1250,7 @@ Begin Window MainWindow
       ToggledMask     =   1810081791
       ToggledPicture  =   0
       Tooltip         =   ""
-      Top             =   433
+      Top             =   497
       Transparent     =   False
       Visible         =   True
       Width           =   40
@@ -1272,13 +1281,13 @@ Begin Window MainWindow
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
-      Top             =   531
+      Top             =   642
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   201
+      Width           =   236
    End
-   Begin cCanvasButton cCanvasButton3
+   Begin cCanvasButton ColorCCBtn
       Active          =   False
       AllowAutoDeactivate=   True
       AllowFocus      =   False
@@ -1288,7 +1297,6 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   0
-      Cursor          =   7
       DarkModeDownColor=   &c000000FF
       DarkModeDownPicture=   0
       DarkModeDownToggledColor=   &c000000FF
@@ -1304,6 +1312,7 @@ Begin Window MainWindow
       DoubleBuffer    =   False
       Down            =   True
       DownColor       =   &cC8000000
+      DownCursor      =   6
       DownMask        =   1921011711
       DownPicture     =   0
       DownToggled     =   False
@@ -1314,6 +1323,7 @@ Begin Window MainWindow
       Height          =   34
       Hover           =   True
       HoverColor      =   &cC8000000
+      HoverCursor     =   6
       HoverMask       =   1921011711
       HoverPicture    =   0
       HoverToggled    =   False
@@ -1322,7 +1332,7 @@ Begin Window MainWindow
       HoverToggledPicture=   0
       Index           =   -2147483648
       InitialParent   =   ""
-      Left            =   231
+      Left            =   266
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1341,12 +1351,12 @@ Begin Window MainWindow
       ToggledMask     =   0
       ToggledPicture  =   0
       Tooltip         =   ""
-      Top             =   520
+      Top             =   631
       Transparent     =   False
       Visible         =   True
       Width           =   36
    End
-   Begin Label Label12
+   Begin Label LeftLbl
       AllowAutoDeactivate=   True
       Bold            =   False
       DataField       =   ""
@@ -1359,7 +1369,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   134
+      Left            =   132
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1375,13 +1385,13 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   60
+      Top             =   64
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   55
+      Width           =   40
    End
-   Begin TextField TextField3
+   Begin TextField LeftTxtFld
       AllowAutoDeactivate=   True
       AllowFocusRing  =   True
       AllowSpellChecking=   False
@@ -1400,7 +1410,7 @@ Begin Window MainWindow
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
-      Left            =   201
+      Left            =   184
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1417,14 +1427,14 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   58
+      Top             =   62
       Transparent     =   False
       Underline       =   False
       ValidationMask  =   "####"
       Visible         =   True
       Width           =   40
    End
-   Begin Label Label13
+   Begin Label TopLbl
       AllowAutoDeactivate=   True
       Bold            =   False
       DataField       =   ""
@@ -1437,7 +1447,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   134
+      Left            =   132
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1453,13 +1463,13 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   94
+      Top             =   98
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   55
+      Width           =   40
    End
-   Begin TextField TextField4
+   Begin TextField TopTxtFld
       AllowAutoDeactivate=   True
       AllowFocusRing  =   True
       AllowSpellChecking=   False
@@ -1478,7 +1488,7 @@ Begin Window MainWindow
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
-      Left            =   201
+      Left            =   184
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1495,14 +1505,14 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   92
+      Top             =   96
       Transparent     =   False
       Underline       =   False
       ValidationMask  =   "####"
       Visible         =   True
       Width           =   40
    End
-   Begin Label Label14
+   Begin Label WidthLbl
       AllowAutoDeactivate=   True
       Bold            =   False
       DataField       =   ""
@@ -1515,7 +1525,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   253
+      Left            =   241
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1531,13 +1541,13 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   62
+      Top             =   64
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   55
+      Width           =   44
    End
-   Begin TextField TextField5
+   Begin TextField WidthTxtFld
       AllowAutoDeactivate=   True
       AllowFocusRing  =   True
       AllowSpellChecking=   False
@@ -1556,7 +1566,7 @@ Begin Window MainWindow
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
-      Left            =   320
+      Left            =   298
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1573,14 +1583,14 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   60
+      Top             =   62
       Transparent     =   False
       Underline       =   False
       ValidationMask  =   "####"
       Visible         =   True
       Width           =   40
    End
-   Begin Label Label15
+   Begin Label HeightLbl
       AllowAutoDeactivate=   True
       Bold            =   False
       DataField       =   ""
@@ -1593,7 +1603,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   253
+      Left            =   241
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1609,13 +1619,13 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   96
+      Top             =   98
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   55
+      Width           =   44
    End
-   Begin TextField TextField6
+   Begin TextField HeightTxtField
       AllowAutoDeactivate=   True
       AllowFocusRing  =   True
       AllowSpellChecking=   False
@@ -1634,7 +1644,7 @@ Begin Window MainWindow
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
-      Left            =   320
+      Left            =   298
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1651,7 +1661,7 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   94
+      Top             =   96
       Transparent     =   False
       Underline       =   False
       ValidationMask  =   "####"
@@ -1661,9 +1671,112 @@ Begin Window MainWindow
    Begin DesktopColorPicker BGColorPicker
       HasAlpha        =   True
       Index           =   -2147483648
+      IsVisible       =   False
       LockedInPosition=   False
       Scope           =   0
       TabPanelIndex   =   0
+   End
+   Begin Label Label1
+      AllowAutoDeactivate=   True
+      Bold            =   False
+      DataField       =   ""
+      DataSource      =   ""
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      Height          =   20
+      Index           =   -2147483648
+      InitialParent   =   ""
+      Italic          =   False
+      Left            =   16
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      Multiline       =   False
+      Scope           =   0
+      Selectable      =   False
+      TabIndex        =   36
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Text            =   "Change color and picture properties:"
+      TextAlignment   =   3
+      TextColor       =   &c00000000
+      Tooltip         =   ""
+      Top             =   560
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   True
+      Width           =   238
+   End
+   Begin Label DCursorLbl
+      AllowAutoDeactivate=   True
+      Bold            =   False
+      DataField       =   ""
+      DataSource      =   ""
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      Height          =   20
+      Index           =   -2147483648
+      InitialParent   =   ""
+      Italic          =   False
+      Left            =   154
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      Multiline       =   False
+      Scope           =   0
+      Selectable      =   False
+      TabIndex        =   37
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Text            =   """Down"" Cursor:"
+      TextAlignment   =   3
+      TextColor       =   &c00000000
+      Tooltip         =   ""
+      Top             =   261
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   True
+      Width           =   100
+   End
+   Begin PopupMenu DCursorPopupMenu
+      AllowAutoDeactivate=   True
+      Bold            =   False
+      DataField       =   ""
+      DataSource      =   ""
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      Height          =   20
+      Index           =   -2147483648
+      InitialParent   =   ""
+      InitialValue    =   ""
+      Italic          =   False
+      Left            =   266
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      Scope           =   0
+      SelectedRowIndex=   0
+      TabIndex        =   38
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Tooltip         =   ""
+      Top             =   261
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   True
+      Width           =   213
    End
 End
 #tag EndWindow
@@ -1686,10 +1799,14 @@ End
 		AllSet As Boolean = False
 	#tag EndProperty
 
+	#tag Property, Flags = &h0
+		TempColor As Color = &c000000
+	#tag EndProperty
+
 
 #tag EndWindowCode
 
-#tag Events cCanvasButton1
+#tag Events PreviewCCBtn
 	#tag Event
 		Sub Action()
 		  Select Case Me.ButtonStyle
@@ -1704,32 +1821,32 @@ End
 		End Sub
 	#tag EndEvent
 #tag EndEvents
-#tag Events TextField1
+#tag Events ArcWidthTxtFld
 	#tag Event
 		Sub Open()
-		  Me.Text = cCanvasButton1.ArcWidth.ToText
+		  Me.Text = PreviewCCBtn.ArcWidth.ToText
 		End Sub
 	#tag EndEvent
 	#tag Event
 		Sub TextChange()
 		  If Self.AllSet Then
-		    cCanvasButton1.ArcWidth = Me.Text.Val
-		    cCanvasButton1.Invalidate
+		    PreviewCCBtn.ArcWidth = Me.Text.Val
+		    PreviewCCBtn.Invalidate
 		  End if
 		End Sub
 	#tag EndEvent
 #tag EndEvents
-#tag Events TextField2
+#tag Events ArcHeightTxtFld
 	#tag Event
 		Sub Open()
-		  Me.Text = cCanvasButton1.ArcHeight.ToText
+		  Me.Text = PreviewCCBtn.ArcHeight.ToText
 		End Sub
 	#tag EndEvent
 	#tag Event
 		Sub TextChange()
 		  If Self.AllSet Then
-		    cCanvasButton1.ArcHeight = Me.Text.Val
-		    cCanvasButton1.Invalidate
+		    PreviewCCBtn.ArcHeight = Me.Text.Val
+		    PreviewCCBtn.Invalidate
 		  End if
 		End Sub
 	#tag EndEvent
@@ -1744,7 +1861,7 @@ End
 		  Me.AddRow("Sticky")
 		  
 		  
-		  Me.SelectedRowIndex = cCanvasButton1.ButtonStyle
+		  Me.SelectedRowIndex = PreviewCCBtn.ButtonStyle
 		  
 		  
 		  
@@ -1754,20 +1871,17 @@ End
 	#tag Event
 		Sub Change()
 		  If Self.AllSet Then
-		    cCanvasButton1.ButtonStyle = Me.SelectedRowIndex
+		    PreviewCCBtn.ButtonStyle = Me.SelectedRowIndex
 		    If Me.SelectedRowIndex < 2 Then
-		      cCanvasButton1.Enabled = True
+		      PreviewCCBtn.Enabled = True
 		    End if
 		  End if
 		End Sub
 	#tag EndEvent
 #tag EndEvents
-#tag Events CursorPopupMenu
+#tag Events HCursorPopupMenu
 	#tag Event
 		Sub Open()
-		  Me.addRow("Standard Pointer")
-		  Me.RowTagAt(Me.LastAddedRowIndex) = "System.Cursors.StandardPointer"
-		  
 		  Me.addRow("Arrow All Directions")
 		  Me.RowTagAt(Me.LastAddedRowIndex) = "System.Cursors.ArrowAllDirections"
 		  
@@ -1798,6 +1912,484 @@ End
 		  Me.addRow("IBeam")
 		  Me.RowTagAt(Me.LastAddedRowIndex) = "System.Cursors.IBeam"
 		  
+		  Me.addRow("Invisible Cursor")
+		  Me.RowTagAt(Me.LastAddedRowIndex) = "System.Cursors.InvisibleCursor"
+		  
+		  Me.addRow("Magnify Larger")
+		  Me.RowTagAt(Me.LastAddedRowIndex) = "System.Cursors.MagnifyLarger"
+		  
+		  Me.addRow("Magnify Smaller")
+		  Me.RowTagAt(Me.LastAddedRowIndex) = "System.Cursors.MagnifySmaller"
+		  
+		  Me.addRow("Splitter EastWest")
+		  Me.RowTagAt(Me.LastAddedRowIndex) = "System.Cursors.SplitterEastWest"
+		  
+		  Me.addRow("Splitter NorthSouth")
+		  Me.RowTagAt(Me.LastAddedRowIndex) = "System.Cursors.SplitterNorthSouth"
+		  
+		  Me.addRow("Standard Pointer")
+		  Me.RowTagAt(Me.LastAddedRowIndex) = "System.Cursors.StandardPointer"
+		  
+		  Me.addRow("Wait")
+		  Me.RowTagAt(Me.LastAddedRowIndex) = "System.Cursors.Wait"
+		  
+		  Me.SelectedRowIndex = PreviewCCBtn.HoverCursor
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Change()
+		  If Self.AllSet Then
+		    PreviewCCBtn.HCursor = PreviewCCBtn.GetCursor(me.SelectedRowIndex)
+		  End if
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events EnableDownStatusCCBtn
+	#tag Event
+		Sub Open()
+		  If PreviewCCBtn.Down Then
+		    Me.Active = True
+		    Me.Status = cCanvasButton.IconStatus.Toggled
+		  End if
+		  
+		  
+		  Me.Invalidate
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Action()
+		  If Self.AllSet Then
+		    PreviewCCBtn.Down = Me.Active
+		  End if
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events PicturePopUpMenu
+	#tag Event
+		Sub Open()
+		  Me.Addrow("Select Picture")
+		  
+		  Me.AddRow("Black_Button")
+		  Me.RowTagAt(me.LastAddedRowIndex) = Black_Button
+		  Me.Addrow("Green_Button")
+		  Me.RowTagAt(me.LastAddedRowIndex) = Green_Button
+		  Me.AddRow("Red_Button")
+		  Me.RowTagAt(me.LastAddedRowIndex) = Red_Button
+		  Me.AddRow("Blue_Button")
+		  Me.RowTagAt(me.LastAddedRowIndex) = Blue_Button
+		  Me.AddRow("Orange_Button")
+		  Me.RowTagAt(me.LastAddedRowIndex) = Orange_Button
+		  Me.AddRow("Yellow_Button")
+		  Me.RowTagAt(me.LastAddedRowIndex) = Yellow_Button
+		  Me.AddRow("Purple_Button")
+		  Me.RowTagAt(me.LastAddedRowIndex) = Purple_Button
+		  
+		  
+		  Me.SelectedRowIndex = 0
+		  
+		  
+		  
+		  
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events EnableHoverStatusCCBtn
+	#tag Event
+		Sub Open()
+		  If PreviewCCBtn.Hover Then
+		    Me.Active = True
+		    Me.Status = cCanvasButton.IconStatus.Toggled
+		  End if
+		  
+		  
+		  Me.Invalidate
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Action()
+		  If Self.AllSet Then
+		    PreviewCCBtn.Hover = Me.Active
+		  End if
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events EnableToggledCCBtn
+	#tag Event
+		Sub Open()
+		  If PreviewCCBtn.Toggled Then
+		    Me.Active = True
+		    Me.Status = cCanvasButton.IconStatus.Toggled
+		  End if
+		  
+		  
+		  Me.Invalidate
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Action()
+		  If Self.AllSet Then
+		    PreviewCCBtn.Toggled = Me.Active
+		    //Need to invalidate the PreviewCCBtn because there is no event doing it
+		    If Me.Active Then
+		      If PreviewCCBtn.Active Then PreviewCCBtn.Status = cCanvasButton.IconStatus.Toggled
+		    End if
+		    If Not Me.Active Then PreviewCCBtn.Status = cCanvasButton.IconStatus.Normal
+		  End if
+		  PreviewCCBtn.Invalidate
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events ActiveCCBtn
+	#tag Event
+		Sub Open()
+		  If PreviewCCBtn.Active Then
+		    Me.Active = True
+		    Me.Status = cCanvasButton.IconStatus.Toggled
+		  End if
+		  
+		  
+		  Me.Invalidate
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Action()
+		  If Self.AllSet Then
+		    PreviewCCBtn.Active = Me.Active
+		    //Need to invalidate the PreviewCCBtn because there is no event doing it
+		    If PreviewCCBtn.Active And PreviewCCBtn.Toggled Then
+		      PreviewCCBtn.Status = cCanvasButton.IconStatus.Toggled
+		    Else
+		      PreviewCCBtn.Status = cCanvasButton.IconStatus.Normal
+		    End if
+		    PreviewCCBtn.Invalidate
+		  End if
+		  
+		  
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events EnabledCCBtn
+	#tag Event
+		Sub Open()
+		  If PreviewCCBtn.Enabled Then
+		    Me.Active = True
+		    Me.Status = cCanvasButton.IconStatus.Toggled
+		  End if
+		  
+		  
+		  Me.Invalidate
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Action()
+		  If Self.AllSet Then
+		    PreviewCCBtn.Enabled = Me.Active
+		  End if
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events ActiveTimer
+	#tag Event
+		Sub Action()
+		  If ActiveCCBtn.Active <> PreviewCCBtn.Active Then
+		    ActiveCCBtn.Active = PreviewCCBtn.Active
+		    If ActiveCCBtn.Active Then
+		      ActiveCCBtn.Status = cCanvasButton.IconStatus.Toggled
+		    Else
+		      ActiveCCBtn.Status = cCanvasButton.IconStatus.Normal
+		    End if
+		    ActiveCCBtn.Invalidate
+		  End if
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events PicturePropertyPopupMenu
+	#tag Event
+		Sub Open()
+		  Me.Addrow("Select Mode")
+		  Var Props() as Introspection.PropertyInfo = Introspection.GetType(PreviewCCBtn).GetProperties()
+		  for each p as Introspection.PropertyInfo in Props
+		    
+		    If p.Name.Right(7) = "Picture" then
+		      Me.AddRow(p.name.Replace("Picture", ""))
+		      Me.RowTagAt(Me.LastAddedRowIndex) = p
+		    End if
+		    
+		  next
+		  
+		  
+		  If Me.RowCount > 0 Then
+		    Me.SelectedRowIndex = 0
+		  End if
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events PictureCCBtn
+	#tag Event
+		Sub Action()
+		  If Self.PicturePropertyPopupMenu.SelectedRowIndex > 0 And Self.PicturePopUpMenu.SelectedRowIndex > 0 Then
+		    
+		    Select Case PicturePropertyPopupMenu.SelectedRow.ToText
+		      
+		    Case "DarkModeDown"
+		      PreviewCCBtn.DarkModeDownPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
+		      
+		    Case "DarkModeDownToggled"
+		      PreviewCCBtn.DarkModeDownToggledPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
+		      
+		    Case "DarkModeHover"
+		      PreviewCCBtn.DarkModeHoverPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
+		      
+		    Case "DarkmodeHoverToggled"
+		      PreviewCCBtn.DarkmodeHoverToggledPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
+		      
+		    Case "DarkModeNormal"
+		      PreviewCCBtn.DarkModeNormalPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
+		      
+		    Case "DarkModeToggled"
+		      PreviewCCBtn.DarkModeToggledPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
+		      
+		    Case "DownPicture"
+		      PreviewCCBtn.DownPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
+		      
+		    Case "DownToggled"
+		      PreviewCCBtn.DownToggledPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
+		      
+		    Case "Hover"
+		      PreviewCCBtn.HoverPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
+		      
+		    Case "HoverToggled"
+		      PreviewCCBtn.HoverToggledPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
+		      
+		    Case "Normal"
+		      PreviewCCBtn.NormalPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
+		      
+		    Case "Toggled"
+		      PreviewCCBtn.ToggledPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
+		      
+		    End Select
+		    
+		    PreviewCCBtn.Invalidate
+		    Self.PicturePropertyPopupMenu.SelectedRowIndex = 0
+		    Self.PicturePopUpMenu.SelectedRowIndex = 0
+		    
+		    
+		  Else
+		    MessageBox("Please select a Mode AND a Picture :)")
+		    
+		  End if
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events EnableHoverToggledCCBtn
+	#tag Event
+		Sub Open()
+		  If PreviewCCBtn.HoverToggled Then
+		    Me.Active = True
+		    Me.Status = cCanvasButton.IconStatus.Toggled
+		  End if
+		  
+		  Me.Invalidate
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Action()
+		  If Self.AllSet Then
+		    PreviewCCBtn.HoverToggled = Me.Active
+		    PreviewCCBtn.Invalidate
+		  End if
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events EnableDownToggledCCBtn
+	#tag Event
+		Sub Open()
+		  If PreviewCCBtn.DownToggled Then
+		    Me.Active = True
+		    Me.Status = cCanvasButton.IconStatus.Toggled
+		  End if
+		  
+		  
+		  Me.Invalidate
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Action()
+		  If Self.AllSet Then
+		    PreviewCCBtn.DownToggled = Me.Active
+		    PreviewCCBtn.Invalidate
+		  End if
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events ColorPropertyPopupMenu
+	#tag Event
+		Sub Open()
+		  Me.Addrow("Select Color Property")
+		  Var Props() as Introspection.PropertyInfo = Introspection.GetType(PreviewCCBtn).GetProperties()
+		  for each p as Introspection.PropertyInfo in Props
+		    
+		    If p.Name.Right(5) = "Color" then
+		      Me.AddRow(p.name)
+		      Me.RowTagAt(Me.LastAddedRowIndex) = p
+		    End if
+		    
+		  next
+		  
+		  
+		  If Me.RowCount > 0 Then
+		    Me.SelectedRowIndex = 0
+		  End if
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Change()
+		  
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events ColorCCBtn
+	#tag Event
+		Sub Action()
+		  If ColorPropertyPopupMenu.SelectedRowIndex > 0 Then
+		    
+		    Var myProperties() As Introspection.PropertyInfo = Introspection.GetType(PreviewCCBtn).GetProperties
+		    Var Prop As introspection.PropertyInfo
+		    Var ColorProp As String = ColorPropertyPopupMenu.SelectedRow
+		    
+		    For i As Integer = 0 to myProperties().Count - 1
+		      
+		      if myProperties(i).Name = ColorProp then //found the property to change
+		        
+		        prop = myProperties(i)
+		        Var c  As Color = prop.Value(PreviewCCBtn)
+		        Self.BGColorPicker.Show(c, "Choose a color")
+		      End if
+		    Next
+		    
+		  Else
+		    MessageBox("Please select a Color Property :)")
+		    
+		  End if
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events LeftTxtFld
+	#tag Event
+		Sub Open()
+		  Me.Text = PreviewCCBtn.Left.ToText
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub TextChange()
+		  If Self.AllSet Then
+		    PreviewCCBtn.Left = Me.Text.Val
+		    PreviewCCBtn.Invalidate
+		  End if
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events TopTxtFld
+	#tag Event
+		Sub Open()
+		  Me.Text = PreviewCCBtn.Top.ToText
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub TextChange()
+		  If Self.AllSet Then
+		    PreviewCCBtn.Top = Me.Text.Val
+		    PreviewCCBtn.Invalidate
+		  End if
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events WidthTxtFld
+	#tag Event
+		Sub Open()
+		  Me.Text = PreviewCCBtn.Width.ToText
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub TextChange()
+		  If Self.AllSet Then
+		    PreviewCCBtn.Width = Me.Text.Val
+		    PreviewCCBtn.Invalidate
+		  End if
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events HeightTxtField
+	#tag Event
+		Sub Open()
+		  Me.Text = PreviewCCBtn.Height.ToText
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub TextChange()
+		  If Self.AllSet Then
+		    PreviewCCBtn.Height = Me.Text.Val
+		    PreviewCCBtn.Invalidate
+		  End if
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events BGColorPicker
+	#tag Event
+		Sub ColorSelected(selectedColor As Color)
+		  Var myProperties() As Introspection.PropertyInfo = Introspection.GetType(PreviewCCBtn).GetProperties
+		  Var Prop As introspection.PropertyInfo
+		  Var ColorProp As String = ColorPropertyPopupMenu.SelectedRow
+		  
+		  For i As Integer = 0 to myProperties().Count - 1
+		    
+		    if myProperties(i).Name = ColorProp then //found the property to change
+		      
+		      prop = myProperties(i)
+		      prop.Value(PreviewCCBtn) = SelectedColor
+		      PreviewCCBtn.Invalidate
+		    End if
+		  Next
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Closed()
+		  ColorPropertyPopupMenu.SelectedRowIndex = 0
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events DCursorPopupMenu
+	#tag Event
+		Sub Open()
+		  Me.addRow("Arrow All Directions")
+		  Me.RowTagAt(Me.LastAddedRowIndex) = "System.Cursors.ArrowAllDirections"
+		  
+		  Me.addRow("Arrow East West")
+		  Me.RowTagAt(Me.LastAddedRowIndex) = "System.Cursors.ArrowEastWest"
+		  
+		  Me.addRow("Arrow Northeast Southwest")
+		  Me.RowTagAt(Me.LastAddedRowIndex) = "System.Cursors.ArrowNortheastSouthwest"
+		  
+		  Me.addRow("Arrow North South")
+		  Me.RowTagAt(Me.LastAddedRowIndex) = "System.Cursors.ArrowNorthSouth"
+		  
+		  Me.addRow("Arrow Northwest Southeast")
+		  Me.RowTagAt(Me.LastAddedRowIndex) = "System.Cursors.ArrowNorthwestSoutheast"
+		  
+		  Me.addRow("Copy")
+		  Me.RowTagAt(Me.LastAddedRowIndex) = "System.Cursors.Copy"
+		  
+		  Me.addRow("Finger Pointer")
+		  Me.RowTagAt(Me.LastAddedRowIndex) = "System.Cursors.FingerPointer"
+		  
+		  Me.addRow("Hand Closed")
+		  Me.RowTagAt(Me.LastAddedRowIndex) = "System.Cursors.HandClosed"
+		  
+		  Me.addRow("Hand Open")
+		  Me.RowTagAt(Me.LastAddedRowIndex) = "System.Cursors.HandOpen"
+		  
+		  Me.addRow("IBeam")
+		  Me.RowTagAt(Me.LastAddedRowIndex) = "System.Cursors.IBeam"
 		  
 		  Me.addRow("Invisible Cursor")
 		  Me.RowTagAt(Me.LastAddedRowIndex) = "System.Cursors.InvisibleCursor"
@@ -1820,454 +2412,13 @@ End
 		  Me.addRow("Wait")
 		  Me.RowTagAt(Me.LastAddedRowIndex) = "System.Cursors.Wait"
 		  
-		  Me.SelectedRowIndex = cCanvasButton1.Cursor
+		  Me.SelectedRowIndex = PreviewCCBtn.DownCursor
 		End Sub
 	#tag EndEvent
 	#tag Event
 		Sub Change()
 		  If Self.AllSet Then
-		    cCanvasButton1.HoverCursor = cCanvasButton1.GetCursor(me.SelectedRowIndex)
-		  End if
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events DownSlider
-	#tag Event
-		Sub Open()
-		  If cCanvasButton1.Down Then
-		    Me.Active = True
-		    Me.Status = cCanvasButton.IconStatus.Toggled
-		  End if
-		  
-		  
-		  Me.Invalidate
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub Action()
-		  If Self.AllSet Then
-		    cCanvasButton1.Down = Me.Active
-		  End if
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events PicturePopUpMenu
-	#tag Event
-		Sub Open()
-		  Me.Addrow("Select Picture")
-		  
-		  Me.AddRow("Black_Speech_Bubble")
-		  Me.RowTagAt(me.LastAddedRowIndex) = Black_Speech_Bubble
-		  Me.Addrow("Green_Speech_Bubble")
-		  Me.RowTagAt(me.LastAddedRowIndex) = Green_Speech_Bubble
-		  Me.AddRow("Red_Speech_Bubble")
-		  Me.RowTagAt(me.LastAddedRowIndex) = Red_Speech_Bubble
-		  Me.AddRow("Blue_Speech_Bubble")
-		  Me.RowTagAt(me.LastAddedRowIndex) = Blue_Speech_Bubble
-		  Me.AddRow("Orange_Speech_Bubble")
-		  Me.RowTagAt(me.LastAddedRowIndex) = Orange_Speech_Bubble
-		  Me.AddRow("Yellow_Speech_Bubble")
-		  Me.RowTagAt(me.LastAddedRowIndex) = Yellow_Speech_Bubble
-		  Me.AddRow("Purple_Speech_Bubble")
-		  Me.RowTagAt(me.LastAddedRowIndex) = Purple_Speech_Bubble
-		  
-		  
-		  Me.SelectedRowIndex = 0
-		  
-		  
-		  
-		  
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub Change()
-		  'If Self.AllSet Then
-		  'cCanvasButton1.NormalPicture = Me.RowTagAt(Me.SelectedRowIndex)
-		  'cCanvasButton1.invalidate
-		  'End if
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events HoverSlider
-	#tag Event
-		Sub Open()
-		  If cCanvasButton1.Hover Then
-		    Me.Active = True
-		    Me.Status = cCanvasButton.IconStatus.Toggled
-		  End if
-		  
-		  
-		  Me.Invalidate
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub Action()
-		  If Self.AllSet Then
-		    cCanvasButton1.Hover = Me.Active
-		  End if
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events ToggledSlider
-	#tag Event
-		Sub Open()
-		  If cCanvasButton1.Toggled Then
-		    Me.Active = True
-		    Me.Status = cCanvasButton.IconStatus.Toggled
-		  End if
-		  
-		  
-		  Me.Invalidate
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub Action()
-		  If Self.AllSet Then
-		    cCanvasButton1.Toggled = Me.Active
-		    //Need to invalidate the cCanvasButton1 because there is no event doing it
-		    If Me.Active Then
-		      If cCanvasButton1.Active Then cCanvasButton1.Status = cCanvasButton.IconStatus.Toggled
-		    End if
-		    If Not Me.Active Then cCanvasButton1.Status = cCanvasButton.IconStatus.Normal
-		  End if
-		  cCanvasButton1.Invalidate
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events ActiveSlider
-	#tag Event
-		Sub Open()
-		  If cCanvasButton1.Active Then
-		    Me.Active = True
-		    Me.Status = cCanvasButton.IconStatus.Toggled
-		  End if
-		  
-		  
-		  Me.Invalidate
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub Action()
-		  If Self.AllSet Then
-		    cCanvasButton1.Active = Me.Active
-		    //Need to invalidate the cCanvasButton1 because there is no event doing it
-		    If cCanvasButton1.Active And cCanvasButton1.Toggled Then
-		      cCanvasButton1.Status = cCanvasButton.IconStatus.Toggled
-		    Else
-		      cCanvasButton1.Status = cCanvasButton.IconStatus.Normal
-		    End if
-		    cCanvasButton1.Invalidate
-		  End if
-		  
-		  
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events EnabledSlider
-	#tag Event
-		Sub Open()
-		  If cCanvasButton1.Enabled Then
-		    Me.Active = True
-		    Me.Status = cCanvasButton.IconStatus.Toggled
-		  End if
-		  
-		  
-		  Me.Invalidate
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub Action()
-		  If Self.AllSet Then
-		    cCanvasButton1.Enabled = Me.Active
-		  End if
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events ActiveTimer
-	#tag Event
-		Sub Action()
-		  If ActiveSlider.Active <> cCanvasButton1.Active Then
-		    ActiveSlider.Active = cCanvasButton1.Active
-		    If ActiveSlider.Active Then ActiveSlider.Status = cCanvasButton.IconStatus.Toggled
-		    If Not ActiveSlider.Active Then ActiveSlider.Status = cCanvasButton.IconStatus.Normal
-		    ActiveSlider.Invalidate
-		  End if
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events PicturePropertyPopupMenu
-	#tag Event
-		Sub Open()
-		  Me.Addrow("Select Picture Property")
-		  Var Props() as Introspection.PropertyInfo = Introspection.GetType(cCanvasButton1).GetProperties()
-		  for each p as Introspection.PropertyInfo in Props
-		    
-		    If p.Name.Right(7) = "Picture" then
-		      Me.AddRow(p.name)
-		      Me.RowTagAt(Me.LastAddedRowIndex) = p
-		    End if
-		    
-		  next
-		  
-		  
-		  If Me.RowCount > 0 Then
-		    Me.SelectedRowIndex = 0
-		  End if
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub Change()
-		  
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events cCanvasButton2
-	#tag Event
-		Sub Action()
-		  If Self.PicturePropertyPopupMenu.SelectedRowIndex > 0 And Self.PicturePopUpMenu.SelectedRowIndex > 0 Then
-		    
-		    Select Case PicturePropertyPopupMenu.SelectedRow.ToText
-		      
-		    Case "DarkModeDownPicture"
-		      cCanvasButton1.DarkModeDownPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
-		      
-		    Case "DarkModeDownToggledPicture"
-		      cCanvasButton1.DarkModeDownToggledPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
-		      
-		    Case "DarkModeHoverPicture"
-		      cCanvasButton1.DarkModeHoverPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
-		      
-		    Case "DarkmodeHoverToggledPicture"
-		      cCanvasButton1.DarkmodeHoverToggledPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
-		      
-		    Case "DarkModeNormalPicture"
-		      cCanvasButton1.DarkModeNormalPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
-		      
-		    Case "DarkModeToggledPicture"
-		      cCanvasButton1.DarkModeToggledPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
-		      
-		    Case "DownPicture"
-		      cCanvasButton1.DownPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
-		      
-		    Case "DownToggledPicture"
-		      cCanvasButton1.DownToggledPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
-		      
-		    Case "HoverPicture"
-		      cCanvasButton1.HoverPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
-		      
-		    Case "HoverToggledPicture"
-		      cCanvasButton1.HoverToggledPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
-		      
-		    Case "NormalPicture"
-		      cCanvasButton1.NormalPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
-		      
-		    Case "ToggledPicture"
-		      cCanvasButton1.ToggledPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
-		      
-		    End Select
-		    
-		    cCanvasButton1.Invalidate
-		    Self.PicturePropertyPopupMenu.SelectedRowIndex = 0
-		    Self.PicturePopUpMenu.SelectedRowIndex = 0
-		    
-		    
-		  Else
-		    MessageBox("Please select a Picture Property AND a Picture :)")
-		    
-		  End if
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events HoverToggledSlider
-	#tag Event
-		Sub Open()
-		  If cCanvasButton1.HoverToggled Then
-		    Me.Active = True
-		    Me.Status = cCanvasButton.IconStatus.Toggled
-		  End if
-		  
-		  Me.Invalidate
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub Action()
-		  If Self.AllSet Then
-		    cCanvasButton1.HoverToggled = Me.Active
-		    cCanvasButton1.Invalidate
-		  End if
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events DownToggledSlider
-	#tag Event
-		Sub Open()
-		  If cCanvasButton1.DownToggled Then
-		    Me.Active = True
-		    Me.Status = cCanvasButton.IconStatus.Toggled
-		  End if
-		  
-		  
-		  Me.Invalidate
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub Action()
-		  If Self.AllSet Then
-		    cCanvasButton1.DownToggled = Me.Active
-		    cCanvasButton1.Invalidate
-		  End if
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events ColorPropertyPopupMenu
-	#tag Event
-		Sub Open()
-		  Me.Addrow("Select Color Property")
-		  Var Props() as Introspection.PropertyInfo = Introspection.GetType(cCanvasButton1).GetProperties()
-		  for each p as Introspection.PropertyInfo in Props
-		    
-		    If p.Name.Right(5) = "Color" then
-		      Me.AddRow(p.name)
-		      Me.RowTagAt(Me.LastAddedRowIndex) = p
-		    End if
-		    
-		  next
-		  
-		  
-		  If Me.RowCount > 0 Then
-		    Me.SelectedRowIndex = 0
-		  End if
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub Change()
-		  
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events cCanvasButton3
-	#tag Event
-		Sub Action()
-		  'If ColorPropertyPopupMenu.SelectedRowIndex > 0 Then
-		  'Var c  As Color
-		  'Var b As Boolean
-		  'c = Me.NormalColor // choose the default color shown in color picker
-		  'Call Color.SelectedFromDialog(c, "Select a Color")
-		  '
-		  '
-		  'Var myProperties() As Introspection.PropertyInfo = Introspection.GetType(cCanvasButton1).GetProperties
-		  'Var ColorProp As String = ColorPropertyPopupMenu.SelectedRow
-		  'For Each prop As Introspection.PropertyInfo In myProperties
-		  '
-		  'if prop.Name = ColorProp then //found the property to change
-		  'prop.Value(cCanvasButton1) = c
-		  'Exit
-		  'End if
-		  'Next
-		  '
-		  '
-		  '
-		  'ColorPropertyPopupMenu.SelectedRowIndex = 0
-		  'cCanvasButton1.Invalidate
-		  'Else
-		  'MessageBox("Please select a Color Property :)")
-		  '
-		  'End if
-		  '
-		  'ColorPicker1.Show(c, "Select Color")
-		  
-		  If ColorPropertyPopupMenu.SelectedRowIndex > 0 Then
-		    Var c  As Color
-		    Var myProperties() As Introspection.PropertyInfo = Introspection.GetType(cCanvasButton1).GetProperties
-		    Var ColorProp As String = ColorPropertyPopupMenu.SelectedRow
-		    For Each prop As Introspection.PropertyInfo In myProperties
-		      
-		      if prop.Name = ColorProp then //found the property to change
-		        c = prop.Value(cCanvasButton1)
-		        Exit
-		      End if
-		    Next
-		    BGColorPicker.Show(c, "Select Color")
-		    
-		  End if
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events TextField3
-	#tag Event
-		Sub Open()
-		  Me.Text = cCanvasButton1.Left.ToText
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub TextChange()
-		  If Self.AllSet Then
-		    cCanvasButton1.Left = Me.Text.Val
-		    cCanvasButton1.Invalidate
-		  End if
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events TextField4
-	#tag Event
-		Sub Open()
-		  Me.Text = cCanvasButton1.Top.ToText
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub TextChange()
-		  If Self.AllSet Then
-		    cCanvasButton1.Top = Me.Text.Val
-		    cCanvasButton1.Invalidate
-		  End if
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events TextField5
-	#tag Event
-		Sub Open()
-		  Me.Text = cCanvasButton1.Width.ToText
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub TextChange()
-		  If Self.AllSet Then
-		    cCanvasButton1.Width = Me.Text.Val
-		    cCanvasButton1.Invalidate
-		  End if
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events TextField6
-	#tag Event
-		Sub Open()
-		  Me.Text = cCanvasButton1.Height.ToText
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub TextChange()
-		  If Self.AllSet Then
-		    cCanvasButton1.Height = Me.Text.Val
-		    cCanvasButton1.Invalidate
-		  End if
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events BGColorPicker
-	#tag Event
-		Sub ColorSelected(selectedColor As Color)
-		  If ColorPropertyPopupMenu.SelectedRowIndex > 0 Then
-		    Var myProperties() As Introspection.PropertyInfo = Introspection.GetType(cCanvasButton1).GetProperties
-		    Var ColorProp As String = ColorPropertyPopupMenu.SelectedRow
-		    For Each prop As Introspection.PropertyInfo In myProperties
-		      
-		      if prop.Name = ColorProp then //found the property to change
-		        prop.Value(cCanvasButton1) = selectedColor
-		        cCanvasButton1.Invalidate
-		        Exit
-		      End if
-		    Next
-		    
+		    PreviewCCBtn.DCursor = PreviewCCBtn.GetCursor(me.SelectedRowIndex)
 		  End if
 		End Sub
 	#tag EndEvent
@@ -2515,6 +2666,14 @@ End
 		Group="Behavior"
 		InitialValue="False"
 		Type="Boolean"
+		EditorType=""
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="TempColor"
+		Visible=false
+		Group="Behavior"
+		InitialValue="&c000000"
+		Type="Color"
 		EditorType=""
 	#tag EndViewProperty
 #tag EndViewBehavior

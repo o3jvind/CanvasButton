@@ -12,8 +12,11 @@ Inherits Canvas
 		    If Not Me.Down Then Me.Status = IconStatus.Normal
 		  End if
 		  
+		  //And change to Down
+		  Me.MouseCursor = Me.DCursor
 		  
 		  Me.Invalidate
+		  
 		  //Pass it to the MouseUp event
 		  Return True
 		  
@@ -31,17 +34,17 @@ Inherits Canvas
 		  If Me.Active Then
 		    If Me.Hover Then Me.Status = IconStatus.Hover
 		    If Me.HoverToggled Then Me.Status = IconStatus.HoverToggled
-		    If Not Me.Hover And Not Me.HoverToggled Then Me.Status = IconStatus.Normal
+		    'If Not Me.Hover And Not Me.HoverToggled Then Me.Status = IconStatus.Normal
 		  Else
 		    If Me.Hover Then Me.Status = IconStatus.Hover
-		    If Not Me.Hover Then Me.Status = IconStatus.Normal
+		    'If Not Me.Hover Then Me.Status = IconStatus.Normal
 		  End If
 		  
 		  //Store the cursor for Exit
 		  Me.AppCursor = App.MouseCursor
 		  
 		  //And change to hover
-		  Me.MouseCursor = Me.HoverCursor
+		  Me.MouseCursor = Me.HCursor
 		  
 		  Me.Invalidate
 		End Sub
@@ -78,13 +81,18 @@ Inherits Canvas
 		    If Me.Active Then
 		      If Me.Hover Then Me.Status = IconStatus.Hover
 		      If Me.HoverToggled Then Me.Status = IconStatus.HoverToggled
-		      If Not Me.Hover And Not Me.HoverToggled Then Me.Status = IconStatus.Normal
+		      'If Not Me.Hover And Not Me.HoverToggled Then Me.Status = IconStatus.Normal
 		    Else
 		      If Me.Hover Then Me.Status = IconStatus.Hover
 		      If Not Me.Hover Then Me.Status = IconStatus.Normal
 		    End if
 		    
+		    //And change mouse to hover
+		    Me.MouseCursor = Me.HCursor
+		    
 		    Me.Invalidate
+		    
+		    
 		    
 		    RaiseEvent Action
 		  End If
@@ -101,8 +109,9 @@ Inherits Canvas
 		    Me.Status = IconStatus.Normal
 		  End if
 		  
-		  //Set the cursor for Hover
-		  Me.HoverCursor = Me.GetCursor(Me.Cursor)
+		  //Set the cursor for Hover & Down
+		  Me.HCursor = Me.GetCursor(Me.HoverCursor)
+		  Me.DCursor = Me.GetCursor(Me.DownCursor)
 		  
 		  RaiseEvent Open
 		End Sub
@@ -196,40 +205,38 @@ Inherits Canvas
 		Function GetCursor(i As Integer) As MouseCursor
 		  Select Case i
 		  Case 0
-		    Return System.Cursors.StandardPointer
-		  Case 1
 		    Return System.Cursors.ArrowAllDirections
-		  Case 2
+		  Case 1
 		    Return System.Cursors.ArrowEastWest
-		  Case 3
+		  Case 2
 		    Return System.Cursors.ArrowNortheastSouthwest
-		  Case 4
+		  Case 3
 		    Return System.Cursors.ArrowNorthSouth
-		  Case 5
+		  Case 4
 		    Return System.Cursors.ArrowNorthwestSoutheast
-		  Case 6
+		  Case 5
 		    Return System.Cursors.Copy
-		  Case 7
+		  Case 6
 		    Return System.Cursors.FingerPointer
-		  Case 8
+		  Case 7
 		    Return System.Cursors.HandClosed
-		  Case 9
+		  Case 8
 		    Return System.Cursors.HandOpen
-		  Case 10
+		  Case 9
 		    Return System.Cursors.IBeam
-		  Case 11
+		  Case 10
 		    Return System.Cursors.InvisibleCursor
-		  Case 12
+		  Case 11
 		    Return System.Cursors.MagnifyLarger
-		  Case 13
+		  Case 12
 		    Return System.Cursors.MagnifySmaller
-		  Case 14
+		  Case 13
 		    Return System.Cursors.SplitterEastWest
-		  Case 15
+		  Case 14
 		    Return System.Cursors.SplitterNorthSouth
-		  Case 16
+		  Case 15
 		    Return System.Cursors.StandardPointer
-		  Case 17
+		  Case 16
 		    Return System.Cursors.Wait
 		  End Select
 		End Function
@@ -263,10 +270,6 @@ Inherits Canvas
 
 	#tag Property, Flags = &h0
 		ButtonStyle As Integer = 0
-	#tag EndProperty
-
-	#tag Property, Flags = &h0
-		Cursor As Integer = 7
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
@@ -318,11 +321,19 @@ Inherits Canvas
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
+		DCursor As MouseCursor
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		Down As Boolean = True
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
 		DownColor As Color = &c000000FF
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		DownCursor As Integer = 6
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
@@ -350,6 +361,10 @@ Inherits Canvas
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
+		HCursor As MouseCursor
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		Hover As Boolean = True
 	#tag EndProperty
 
@@ -358,7 +373,7 @@ Inherits Canvas
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
-		HoverCursor As MouseCursor
+		HoverCursor As Integer = 6
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
@@ -611,31 +626,57 @@ Inherits Canvas
 			#tag EndEnumValues
 		#tag EndViewProperty
 		#tag ViewProperty
-			Name="Cursor"
+			Name="HoverCursor"
 			Visible=true
 			Group="Behavior"
-			InitialValue="7"
+			InitialValue="6"
 			Type="Integer"
 			EditorType="Enum"
 			#tag EnumValues
-				"0 - StandardPointer"
-				"1 - ArrowAllDirections"
-				"2 - ArrowEastWest"
-				"3 - ArrowNortheastSouthwest"
-				"4 - ArrowNorthSouth"
-				"5 - ArrowNorthwestSoutheast"
-				"6 - Copy"
-				"7 - FingerPointer"
-				"8 - HandClosed"
-				"9 - HandOpen"
-				"10 - IBeam"
-				"11 - InvisibleCursor"
-				"12 - MagnifyLarger"
-				"13 - MagnifySmaller"
-				"14 - SplitterEastWest"
-				"15 - SplitterNorthSouth"
-				"16 - StandardPointer"
-				"17 - Wait"
+				"0 - Arrow All Directions"
+				"1 - Arrow East West"
+				"2 - Arrow Northeast Southwest"
+				"3 - Arrow North South"
+				"4 - Arrow Northwest Southeast"
+				"5 - Copy"
+				"6 - Finger Pointer"
+				"7 - Hand Closed"
+				"8 - Hand Open"
+				"9 - IBeam"
+				"10 - Invisible Cursor"
+				"11 - Magnify Larger"
+				"12 - Magnify Smaller"
+				"13 - Splitter EastWest"
+				"14 - Splitter NorthSouth"
+				"15 - Standard Pointer"
+				"16 - Wait"
+			#tag EndEnumValues
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="DownCursor"
+			Visible=true
+			Group="Behavior"
+			InitialValue="6"
+			Type="Integer"
+			EditorType="Enum"
+			#tag EnumValues
+				"0 - Arrow All Directions"
+				"1 - Arrow East West"
+				"2 - Arrow Northeast Southwest"
+				"3 - Arrow North South"
+				"4 - Arrow Northwest Southeast"
+				"5 - Copy"
+				"6 - Finger Pointer"
+				"7 - Hand Closed"
+				"8 - Hand Open"
+				"9 - IBeam"
+				"10 - Invisible Cursor"
+				"11 - Magnify Larger"
+				"12 - Magnify Smaller"
+				"13 - Splitter EastWest"
+				"14 - Splitter NorthSouth"
+				"15 - Standard Pointer"
+				"16 - Wait"
 			#tag EndEnumValues
 		#tag EndViewProperty
 		#tag ViewProperty
