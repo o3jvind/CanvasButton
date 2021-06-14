@@ -1,7 +1,7 @@
 # cCanvasButton
 
-cCanvasButton er en custom control til XOJO og som navnet indikerer en knap baseret på en Canvas Control.
-Knappen kan fungere som “Push Button”, “Toggle Button” og “Sticky Button” og har seks forskellige tilstande – nemlig:
+cCanvasButton is a custom control for XOJO and as the name implies a button based on a Canvas Control.
+The button can function as a "Push Button", "Toggle Button" and "Sticky Button" and has six different modes - namely:
 
 Normal
 Hover
@@ -10,14 +10,14 @@ Toggled
 Hover Toggled
 Down Toggled.
 
-Ja, i virkeligheden har den 12 forskellige tilstande fordi alle 6 tilstande kan konfigureres individuelt til “Dark Mode”.
+Yes, in fact it has 12 different modes because all 6 modes can be individually configured to "Dark Mode".
 
-Knappen understøtter alpha og man kan således bruge billeder med alpha kanaler. Både som deciderede billeder og som alpha masker. Endda på samme tid.
+The button supports alpha and thus you can use images with alpha channels. Both as actual images and as alpha masks. Even at the same time.
 
-Billederne bliver skaleret så de passer til knappens dimensioner – pas på aspect ratio
+The images are scaled to fit the dimensions of the button - watch out for aspect ratio
 
-Derudover kan man anvende en baggrundsfarve som kan modificeres med afrundede hjørner og  bruges til at lave runde knapper.
+In addition, you can use a background colour which can be modified with rounded corners and used to make round buttons.
 
-Musemarkøren kan sættes for Hover og Down.
+The mouse cursor can be set for Hover and Down.
 
-Alt kan konfigureres i IDE’en eller under afvikling.
+Everything can be configured in the IDE or during runtime.
