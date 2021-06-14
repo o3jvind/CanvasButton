@@ -1,7 +1,7 @@
 # cCanvasButton
 
 cCanvasButton is a custom control for XOJO and as the name implies a button based on a Canvas Control.
-The button can function as a "Push Button", "Toggle Button" and "Sticky Button" and has six different modes - namely:
+The button can function as a "Push Button", "Toggle Button" or "Sticky Button" and it has six different modes - namely:
 
 Normal
 Hover
@@ -10,7 +10,7 @@ Toggled
 Hover Toggled
 Down Toggled.
 
-Yes, in fact it has 12 different modes because all 6 modes can be individually configured to "Dark Mode".
+In fact it has 12 different modes because all 6 modes can be individually configured to "Dark Mode".
 
 The button supports alpha and thus you can use images with alpha channels. Both as actual images and as alpha masks. Even at the same time.
 
