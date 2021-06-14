@@ -75,7 +75,7 @@ Begin Window MainWindow
       HoverToggledPicture=   339718143
       Index           =   -2147483648
       InitialParent   =   ""
-      Left            =   18
+      Left            =   20
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
