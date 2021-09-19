@@ -10,7 +10,7 @@ Begin Window MainWindow
    HasFullScreenButton=   False
    HasMaximizeButton=   False
    HasMinimizeButton=   False
-   Height          =   685
+   Height          =   507
    ImplicitInstance=   True
    MacProcID       =   0
    MaximumHeight   =   32000
@@ -23,7 +23,7 @@ Begin Window MainWindow
    Title           =   "Canvas Button"
    Type            =   0
    Visible         =   True
-   Width           =   499
+   Width           =   740
    Begin cCanvasButton PreviewCCBtn
       Active          =   False
       AllowAutoDeactivate=   True
@@ -34,6 +34,7 @@ Begin Window MainWindow
       ArcWidth        =   60
       Backdrop        =   0
       ButtonStyle     =   1
+      DarkModeDisabledOverlayColor=   &cFFFFFF7F
       DarkModeDownColor=   &cCCCCCC00
       DarkModeDownMask=   0
       DarkModeDownPicture=   1862529023
@@ -45,7 +46,7 @@ Begin Window MainWindow
       DarkModeHoverPicture=   418928639
       DarkModeHoverToggledColor=   &c95959500
       DarkmodeHoverToggledMask=   0
-      DarkmodeHoverToggledPicture=   0
+      DarkmodeHoverToggledPicture=   339718143
       DarkModeNormalColor=   &cFFFFFF00
       DarkModeNormalMask=   0
       DarkModeNormalPicture=   150888447
@@ -54,45 +55,46 @@ Begin Window MainWindow
       DarkModeToggledPicture=   1609400319
       DoubleBuffer    =   False
       Down            =   True
-      DownColor       =   &cCDCDCD00
       DownCursor      =   7
-      DownMask        =   0
-      DownPicture     =   1862529023
       DownToggled     =   True
-      DownToggledColor=   &c95959500
-      DownToggledMask =   0
-      DownToggledPicture=   2018215935
       Enabled         =   True
       Height          =   100
       Hover           =   True
-      HoverColor      =   &cE6E6E600
       HoverCursor     =   6
-      HoverMask       =   0
-      HoverPicture    =   418928639
       HoverToggled    =   True
-      HoverToggledColor=   &c96969600
-      HoverToggledMask=   0
-      HoverToggledPicture=   339718143
       Index           =   -2147483648
       InitialParent   =   ""
-      Left            =   20
+      Left            =   320
+      LightModeDisabledOverlayColor=   &cFFFFFF7F
+      LightModeDownColor=   &cCCCCCC00
+      LightModeDownMask=   0
+      LightModeDownPicture=   1862529023
+      LightModeDownToggledColor=   &c95959500
+      LightModeDownToggledMask=   0
+      LightModeDownToggledPicture=   2018215935
+      LightModeHoverColor=   &cE5E5E500
+      LightModeHoverMask=   0
+      LightModeHoverPicture=   418928639
+      LightModeHoverToggledColor=   &c95959500
+      LightModeHoverToggledMask=   0
+      LightModeHoverToggledPicture=   339718143
+      LightModeNormalColor=   &cFEFFFE00
+      LightModeNormalMask=   0
+      LightModeNormalPicture=   150888447
+      LightModeToggledColor=   &cB3B3B300
+      LightModeToggledMask=   0
+      LightModeToggledPicture=   1609400319
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      NormalColor     =   &cFFFFFF00
-      NormalMask      =   0
-      NormalPicture   =   150888447
       Scope           =   0
       Status          =   "IconStatus.Normal"
       TabIndex        =   0
       TabPanelIndex   =   0
       TabStop         =   False
       Toggled         =   True
-      ToggledColor    =   &cB3B3B300
-      ToggledMask     =   0
-      ToggledPicture  =   1609400319
       Tooltip         =   ""
       Top             =   20
       Transparent     =   False
@@ -112,7 +114,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   355
+      Left            =   303
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -128,7 +130,7 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   68
+      Top             =   163
       Transparent     =   False
       Underline       =   False
       Visible         =   True
@@ -147,7 +149,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   355
+      Left            =   303
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -163,7 +165,7 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   98
+      Top             =   198
       Transparent     =   False
       Underline       =   False
       Visible         =   True
@@ -182,7 +184,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   154
+      Left            =   20
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -198,7 +200,7 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   197
+      Top             =   268
       Transparent     =   False
       Underline       =   False
       Visible         =   True
@@ -217,7 +219,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   154
+      Left            =   20
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -233,7 +235,7 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   229
+      Top             =   303
       Transparent     =   False
       Underline       =   False
       Visible         =   True
@@ -254,12 +256,12 @@ Begin Window MainWindow
       FontUnit        =   0
       Format          =   ""
       HasBorder       =   True
-      Height          =   22
+      Height          =   24
       Hint            =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   439
+      Left            =   387
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -276,7 +278,7 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   66
+      Top             =   161
       Transparent     =   False
       Underline       =   False
       ValidationMask  =   "####"
@@ -298,12 +300,12 @@ Begin Window MainWindow
       FontUnit        =   0
       Format          =   ""
       HasBorder       =   True
-      Height          =   22
+      Height          =   24
       Hint            =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   439
+      Left            =   387
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -320,7 +322,7 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   98
+      Top             =   196
       Transparent     =   False
       Underline       =   False
       ValidationMask  =   "####"
@@ -341,7 +343,7 @@ Begin Window MainWindow
       InitialParent   =   ""
       InitialValue    =   ""
       Italic          =   False
-      Left            =   266
+      Left            =   132
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -353,11 +355,11 @@ Begin Window MainWindow
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
-      Top             =   197
+      Top             =   270
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   213
+      Width           =   295
    End
    Begin PopupMenu HCursorPopupMenu
       AllowAutoDeactivate=   True
@@ -373,7 +375,7 @@ Begin Window MainWindow
       InitialParent   =   ""
       InitialValue    =   ""
       Italic          =   False
-      Left            =   266
+      Left            =   132
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -385,11 +387,11 @@ Begin Window MainWindow
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
-      Top             =   229
+      Top             =   305
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   213
+      Width           =   295
    End
    Begin cCanvasButton EnableDownStatusCCBtn
       Active          =   False
@@ -401,6 +403,7 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   1
+      DarkModeDisabledOverlayColor=   &cFFFFFF7F
       DarkModeDownColor=   &c00000000
       DarkModeDownMask=   1810081791
       DarkModeDownPicture=   0
@@ -421,47 +424,48 @@ Begin Window MainWindow
       DarkModeToggledPicture=   0
       DoubleBuffer    =   False
       Down            =   True
-      DownColor       =   &c00000000
       DownCursor      =   6
-      DownMask        =   1810081791
-      DownPicture     =   0
       DownToggled     =   True
-      DownToggledColor=   &cC7C8C700
-      DownToggledMask =   1589739519
-      DownToggledPicture=   0
       Enabled         =   True
       Height          =   24
-      Hover           =   True
-      HoverColor      =   &cC7C8C700
+      Hover           =   False
       HoverCursor     =   6
-      HoverMask       =   1589739519
-      HoverPicture    =   0
-      HoverToggled    =   True
-      HoverToggledColor=   &c00000000
-      HoverToggledMask=   1810081791
-      HoverToggledPicture=   0
+      HoverToggled    =   False
       Index           =   -2147483648
       InitialParent   =   ""
-      Left            =   439
+      Left            =   680
+      LightModeDisabledOverlayColor=   &cFFFFFF88
+      LightModeDownColor=   &c00000000
+      LightModeDownMask=   1810081791
+      LightModeDownPicture=   0
+      LightModeDownToggledColor=   &cCCCCCC00
+      LightModeDownToggledMask=   1589739519
+      LightModeDownToggledPicture=   0
+      LightModeHoverColor=   &cCCCCCC00
+      LightModeHoverMask=   1589739519
+      LightModeHoverPicture=   0
+      LightModeHoverToggledColor=   &c00000000
+      LightModeHoverToggledMask=   1810081791
+      LightModeHoverToggledPicture=   0
+      LightModeNormalColor=   &cCCCCCC00
+      LightModeNormalMask=   1589739519
+      LightModeNormalPicture=   0
+      LightModeToggledColor=   &c00000000
+      LightModeToggledMask=   1810081791
+      LightModeToggledPicture=   0
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      NormalColor     =   &cC7C8C700
-      NormalMask      =   1589739519
-      NormalPicture   =   0
       Scope           =   0
       Status          =   "IconStatus.Normal"
       TabIndex        =   23
       TabPanelIndex   =   0
       TabStop         =   False
       Toggled         =   True
-      ToggledColor    =   &c00000000
-      ToggledMask     =   1810081791
-      ToggledPicture  =   0
       Tooltip         =   ""
-      Top             =   389
+      Top             =   231
       Transparent     =   False
       Visible         =   True
       Width           =   40
@@ -480,7 +484,7 @@ Begin Window MainWindow
       InitialParent   =   ""
       InitialValue    =   ""
       Italic          =   False
-      Left            =   266
+      Left            =   206
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -492,11 +496,11 @@ Begin Window MainWindow
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
-      Top             =   592
+      Top             =   415
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   161
+      Width           =   176
    End
    Begin Label EnableDownStatusLbl
       AllowAutoDeactivate=   True
@@ -511,7 +515,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   53
+      Left            =   515
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -527,11 +531,11 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   389
+      Top             =   233
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   201
+      Width           =   145
    End
    Begin cCanvasButton EnableHoverStatusCCBtn
       Active          =   False
@@ -543,6 +547,7 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   1
+      DarkModeDisabledOverlayColor=   &cFFFFFF7E
       DarkModeDownColor=   &cC8000000
       DarkModeDownMask=   1810081791
       DarkModeDownPicture=   0
@@ -563,47 +568,48 @@ Begin Window MainWindow
       DarkModeToggledPicture=   0
       DoubleBuffer    =   False
       Down            =   True
-      DownColor       =   &cC8000000
       DownCursor      =   6
-      DownMask        =   1810081791
-      DownPicture     =   0
       DownToggled     =   True
-      DownToggledColor=   &cC7C8C700
-      DownToggledMask =   1589739519
-      DownToggledPicture=   0
       Enabled         =   True
       Height          =   24
-      Hover           =   True
-      HoverColor      =   &cC7C8C700
+      Hover           =   False
       HoverCursor     =   6
-      HoverMask       =   1589739519
-      HoverPicture    =   0
-      HoverToggled    =   True
-      HoverToggledColor=   &cC8000000
-      HoverToggledMask=   1810081791
-      HoverToggledPicture=   0
+      HoverToggled    =   False
       Index           =   -2147483648
       InitialParent   =   ""
-      Left            =   439
+      Left            =   680
+      LightModeDisabledOverlayColor=   &cFFFFFF88
+      LightModeDownColor=   &cC8000000
+      LightModeDownMask=   1810081791
+      LightModeDownPicture=   0
+      LightModeDownToggledColor=   &cCCCCCC00
+      LightModeDownToggledMask=   1589739519
+      LightModeDownToggledPicture=   0
+      LightModeHoverColor=   &cCCCCCC00
+      LightModeHoverMask=   1589739519
+      LightModeHoverPicture=   0
+      LightModeHoverToggledColor=   &cC8000000
+      LightModeHoverToggledMask=   1810081791
+      LightModeHoverToggledPicture=   0
+      LightModeNormalColor=   &cCCCCCC00
+      LightModeNormalMask=   1589739519
+      LightModeNormalPicture=   0
+      LightModeToggledColor=   &cC8000000
+      LightModeToggledMask=   1810081791
+      LightModeToggledPicture=   0
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      NormalColor     =   &cC7C8C700
-      NormalMask      =   1589739519
-      NormalPicture   =   0
       Scope           =   0
       Status          =   "IconStatus.Normal"
       TabIndex        =   21
       TabPanelIndex   =   0
       TabStop         =   False
       Toggled         =   True
-      ToggledColor    =   &cC8000000
-      ToggledMask     =   1810081791
-      ToggledPicture  =   0
       Tooltip         =   ""
-      Top             =   353
+      Top             =   196
       Transparent     =   False
       Visible         =   True
       Width           =   40
@@ -621,7 +627,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   53
+      Left            =   515
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -637,11 +643,11 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   353
+      Top             =   198
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   201
+      Width           =   145
    End
    Begin cCanvasButton EnableToggledCCBtn
       Active          =   False
@@ -653,6 +659,7 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   1
+      DarkModeDisabledOverlayColor=   &cFEFFFE7F
       DarkModeDownColor=   &cDB00FF00
       DarkModeDownMask=   1810081791
       DarkModeDownPicture=   0
@@ -673,47 +680,48 @@ Begin Window MainWindow
       DarkModeToggledPicture=   0
       DoubleBuffer    =   False
       Down            =   True
-      DownColor       =   &cDB00FF00
       DownCursor      =   6
-      DownMask        =   1810081791
-      DownPicture     =   0
       DownToggled     =   True
-      DownToggledColor=   &cC7C8C700
-      DownToggledMask =   1589739519
-      DownToggledPicture=   0
       Enabled         =   True
       Height          =   24
-      Hover           =   True
-      HoverColor      =   &cC7C8C700
+      Hover           =   False
       HoverCursor     =   6
-      HoverMask       =   1589739519
-      HoverPicture    =   0
-      HoverToggled    =   True
-      HoverToggledColor=   &cDB00FF00
-      HoverToggledMask=   1810081791
-      HoverToggledPicture=   0
+      HoverToggled    =   False
       Index           =   -2147483648
       InitialParent   =   ""
-      Left            =   439
+      Left            =   680
+      LightModeDisabledOverlayColor=   &cFFFFFF88
+      LightModeDownColor=   &cDB00FF00
+      LightModeDownMask=   1810081791
+      LightModeDownPicture=   0
+      LightModeDownToggledColor=   &cCCCCCC00
+      LightModeDownToggledMask=   1589739519
+      LightModeDownToggledPicture=   0
+      LightModeHoverColor=   &cCCCCCC00
+      LightModeHoverMask=   1589739519
+      LightModeHoverPicture=   0
+      LightModeHoverToggledColor=   &cDB00FF00
+      LightModeHoverToggledMask=   1810081791
+      LightModeHoverToggledPicture=   0
+      LightModeNormalColor=   &cCCCCCC00
+      LightModeNormalMask=   1589739519
+      LightModeNormalPicture=   0
+      LightModeToggledColor=   &cDB00FF00
+      LightModeToggledMask=   1810081791
+      LightModeToggledPicture=   0
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      NormalColor     =   &cC7C8C700
-      NormalMask      =   1589739519
-      NormalPicture   =   0
       Scope           =   0
       Status          =   "IconStatus.Normal"
       TabIndex        =   25
       TabPanelIndex   =   0
       TabStop         =   False
       Toggled         =   True
-      ToggledColor    =   &cDB00FF00
-      ToggledMask     =   1810081791
-      ToggledPicture  =   0
       Tooltip         =   ""
-      Top             =   421
+      Top             =   266
       Transparent     =   False
       Visible         =   True
       Width           =   40
@@ -731,7 +739,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   53
+      Left            =   478
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -747,11 +755,11 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   425
+      Top             =   268
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   201
+      Width           =   182
    End
    Begin Label EnableHoverToggledLbl
       AllowAutoDeactivate=   True
@@ -766,7 +774,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   53
+      Left            =   470
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -782,11 +790,11 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   461
+      Top             =   303
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   201
+      Width           =   190
    End
    Begin Label EnableDownToggledLbl
       AllowAutoDeactivate=   True
@@ -801,7 +809,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   53
+      Left            =   459
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -817,7 +825,7 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   501
+      Top             =   338
       Transparent     =   False
       Underline       =   False
       Visible         =   True
@@ -833,6 +841,7 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   1
+      DarkModeDisabledOverlayColor=   &c000000FF
       DarkModeDownColor=   &cDB00FF00
       DarkModeDownMask=   1810081791
       DarkModeDownPicture=   0
@@ -853,47 +862,48 @@ Begin Window MainWindow
       DarkModeToggledPicture=   0
       DoubleBuffer    =   False
       Down            =   True
-      DownColor       =   &cDB00FF00
       DownCursor      =   6
-      DownMask        =   1810081791
-      DownPicture     =   0
       DownToggled     =   True
-      DownToggledColor=   &cC7C8C700
-      DownToggledMask =   1589739519
-      DownToggledPicture=   0
       Enabled         =   True
       Height          =   24
-      Hover           =   True
-      HoverColor      =   &cC7C8C700
+      Hover           =   False
       HoverCursor     =   6
-      HoverMask       =   1589739519
-      HoverPicture    =   0
-      HoverToggled    =   True
-      HoverToggledColor=   &cDB00FF00
-      HoverToggledMask=   1810081791
-      HoverToggledPicture=   0
+      HoverToggled    =   False
       Index           =   -2147483648
       InitialParent   =   ""
-      Left            =   439
+      Left            =   132
+      LightModeDisabledOverlayColor=   &cFFFFFF88
+      LightModeDownColor=   &cDB00FF00
+      LightModeDownMask=   1810081791
+      LightModeDownPicture=   0
+      LightModeDownToggledColor=   &cCCCCCC00
+      LightModeDownToggledMask=   1589739519
+      LightModeDownToggledPicture=   0
+      LightModeHoverColor=   &cCCCCCC00
+      LightModeHoverMask=   0
+      LightModeHoverPicture=   0
+      LightModeHoverToggledColor=   &c000000FF
+      LightModeHoverToggledMask=   0
+      LightModeHoverToggledPicture=   0
+      LightModeNormalColor=   &cCCCCCC00
+      LightModeNormalMask=   1589739519
+      LightModeNormalPicture=   0
+      LightModeToggledColor=   &cDB00FF00
+      LightModeToggledMask=   1810081791
+      LightModeToggledPicture=   0
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      NormalColor     =   &cC7C8C700
-      NormalMask      =   1589739519
-      NormalPicture   =   0
       Scope           =   0
       Status          =   "IconStatus.Normal"
       TabIndex        =   11
       TabPanelIndex   =   0
       TabStop         =   False
       Toggled         =   True
-      ToggledColor    =   &cDB00FF00
-      ToggledMask     =   1810081791
-      ToggledPicture  =   0
       Tooltip         =   ""
-      Top             =   142
+      Top             =   231
       Transparent     =   False
       Visible         =   True
       Width           =   40
@@ -911,7 +921,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   199
+      Left            =   65
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -927,7 +937,7 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   146
+      Top             =   233
       Transparent     =   False
       Underline       =   False
       Visible         =   True
@@ -943,6 +953,7 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   1
+      DarkModeDisabledOverlayColor=   &cFFFFFF7F
       DarkModeDownColor=   &c00B30000
       DarkModeDownMask=   1810081791
       DarkModeDownPicture=   0
@@ -963,47 +974,48 @@ Begin Window MainWindow
       DarkModeToggledPicture=   0
       DoubleBuffer    =   False
       Down            =   True
-      DownColor       =   &c00B30000
       DownCursor      =   6
-      DownMask        =   1810081791
-      DownPicture     =   0
       DownToggled     =   True
-      DownToggledColor=   &cC7C8C700
-      DownToggledMask =   1589739519
-      DownToggledPicture=   0
       Enabled         =   True
       Height          =   24
-      Hover           =   True
-      HoverColor      =   &cC7C8C700
+      Hover           =   False
       HoverCursor     =   6
-      HoverMask       =   1589739519
-      HoverPicture    =   0
-      HoverToggled    =   True
-      HoverToggledColor=   &c00B30000
-      HoverToggledMask=   1810081791
-      HoverToggledPicture=   0
+      HoverToggled    =   False
       Index           =   -2147483648
       InitialParent   =   ""
-      Left            =   439
+      Left            =   680
+      LightModeDisabledOverlayColor=   &cFFFFFF88
+      LightModeDownColor=   &c00B30000
+      LightModeDownMask=   1810081791
+      LightModeDownPicture=   0
+      LightModeDownToggledColor=   &cCCCCCC00
+      LightModeDownToggledMask=   1589739519
+      LightModeDownToggledPicture=   0
+      LightModeHoverColor=   &cCCCCCC00
+      LightModeHoverMask=   1589739519
+      LightModeHoverPicture=   0
+      LightModeHoverToggledColor=   &c00B30000
+      LightModeHoverToggledMask=   1810081791
+      LightModeHoverToggledPicture=   0
+      LightModeNormalColor=   &cCCCCCC00
+      LightModeNormalMask=   1589739519
+      LightModeNormalPicture=   0
+      LightModeToggledColor=   &c00B30000
+      LightModeToggledMask=   1810081791
+      LightModeToggledPicture=   0
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      NormalColor     =   &cC7C8C700
-      NormalMask      =   1589739519
-      NormalPicture   =   0
       Scope           =   0
       Status          =   "IconStatus.Normal"
       TabIndex        =   5
       TabPanelIndex   =   0
       TabStop         =   False
       Toggled         =   True
-      ToggledColor    =   &c00B30000
-      ToggledMask     =   1810081791
-      ToggledPicture  =   0
       Tooltip         =   ""
-      Top             =   313
+      Top             =   161
       Transparent     =   False
       Visible         =   True
       Width           =   40
@@ -1021,7 +1033,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   146
+      Left            =   552
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1037,7 +1049,7 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   317
+      Top             =   163
       Transparent     =   False
       Underline       =   False
       Visible         =   True
@@ -1066,7 +1078,7 @@ Begin Window MainWindow
       InitialParent   =   ""
       InitialValue    =   ""
       Italic          =   False
-      Left            =   20
+      Left            =   22
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1078,11 +1090,11 @@ Begin Window MainWindow
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
-      Top             =   594
+      Top             =   415
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   234
+      Width           =   172
    End
    Begin cCanvasButton PictureCCBtn
       Active          =   False
@@ -1094,6 +1106,7 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   0
+      DarkModeDisabledOverlayColor=   &c000000FF
       DarkModeDownColor=   &cC8000000
       DarkModeDownMask=   1199398911
       DarkModeDownPicture=   0
@@ -1114,50 +1127,51 @@ Begin Window MainWindow
       DarkModeToggledPicture=   0
       DoubleBuffer    =   False
       Down            =   True
-      DownColor       =   &cC8000000
       DownCursor      =   6
-      DownMask        =   1199398911
-      DownPicture     =   0
       DownToggled     =   False
-      DownToggledColor=   &c000000FF
-      DownToggledMask =   0
-      DownToggledPicture=   0
       Enabled         =   True
-      Height          =   30
+      Height          =   24
       Hover           =   True
-      HoverColor      =   &cC8000000
       HoverCursor     =   6
-      HoverMask       =   1199398911
-      HoverPicture    =   0
       HoverToggled    =   False
-      HoverToggledColor=   &c000000FF
-      HoverToggledMask=   0
-      HoverToggledPicture=   0
       Index           =   -2147483648
       InitialParent   =   ""
-      Left            =   443
+      Left            =   395
+      LightModeDisabledOverlayColor=   &cFFFFFF88
+      LightModeDownColor=   &cC8000000
+      LightModeDownMask=   1199398911
+      LightModeDownPicture=   0
+      LightModeDownToggledColor=   &c000000FF
+      LightModeDownToggledMask=   0
+      LightModeDownToggledPicture=   0
+      LightModeHoverColor=   &cC8000000
+      LightModeHoverMask=   1199398911
+      LightModeHoverPicture=   0
+      LightModeHoverToggledColor=   &c000000FF
+      LightModeHoverToggledMask=   0
+      LightModeHoverToggledPicture=   0
+      LightModeNormalColor=   &c0950FF00
+      LightModeNormalMask=   1199398911
+      LightModeNormalPicture=   0
+      LightModeToggledColor=   &c000000FF
+      LightModeToggledMask=   0
+      LightModeToggledPicture=   0
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      NormalColor     =   &c0950FF00
-      NormalMask      =   1199398911
-      NormalPicture   =   0
       Scope           =   0
       Status          =   "IconStatus.Normal"
       TabIndex        =   33
       TabPanelIndex   =   0
       TabStop         =   False
       Toggled         =   False
-      ToggledColor    =   &c000000FF
-      ToggledMask     =   0
-      ToggledPicture  =   0
       Tooltip         =   ""
-      Top             =   587
+      Top             =   413
       Transparent     =   False
       Visible         =   True
-      Width           =   36
+      Width           =   32
    End
    Begin cCanvasButton EnableHoverToggledCCBtn
       Active          =   False
@@ -1169,6 +1183,7 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   1
+      DarkModeDisabledOverlayColor=   &cFFFFFF7F
       DarkModeDownColor=   &cFF890000
       DarkModeDownMask=   1810081791
       DarkModeDownPicture=   0
@@ -1189,47 +1204,48 @@ Begin Window MainWindow
       DarkModeToggledPicture=   0
       DoubleBuffer    =   False
       Down            =   True
-      DownColor       =   &cFF890000
       DownCursor      =   6
-      DownMask        =   1810081791
-      DownPicture     =   0
       DownToggled     =   True
-      DownToggledColor=   &cC7C8C700
-      DownToggledMask =   1589739519
-      DownToggledPicture=   0
       Enabled         =   True
       Height          =   24
-      Hover           =   True
-      HoverColor      =   &cC7C8C700
+      Hover           =   False
       HoverCursor     =   6
-      HoverMask       =   1589739519
-      HoverPicture    =   0
-      HoverToggled    =   True
-      HoverToggledColor=   &cFF890000
-      HoverToggledMask=   1810081791
-      HoverToggledPicture=   0
+      HoverToggled    =   False
       Index           =   -2147483648
       InitialParent   =   ""
-      Left            =   439
+      Left            =   680
+      LightModeDisabledOverlayColor=   &cFFFFFF88
+      LightModeDownColor=   &cFF890000
+      LightModeDownMask=   1810081791
+      LightModeDownPicture=   0
+      LightModeDownToggledColor=   &cCCCCCC00
+      LightModeDownToggledMask=   1589739519
+      LightModeDownToggledPicture=   0
+      LightModeHoverColor=   &cCCCCCC00
+      LightModeHoverMask=   1589739519
+      LightModeHoverPicture=   0
+      LightModeHoverToggledColor=   &cFF890000
+      LightModeHoverToggledMask=   1810081791
+      LightModeHoverToggledPicture=   0
+      LightModeNormalColor=   &cCCCCCC00
+      LightModeNormalMask=   1589739519
+      LightModeNormalPicture=   0
+      LightModeToggledColor=   &cFF890000
+      LightModeToggledMask=   1810081791
+      LightModeToggledPicture=   0
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      NormalColor     =   &cC7C8C700
-      NormalMask      =   1589739519
-      NormalPicture   =   0
       Scope           =   0
       Status          =   "IconStatus.Normal"
       TabIndex        =   27
       TabPanelIndex   =   0
       TabStop         =   False
       Toggled         =   True
-      ToggledColor    =   &cFF890000
-      ToggledMask     =   1810081791
-      ToggledPicture  =   0
       Tooltip         =   ""
-      Top             =   457
+      Top             =   303
       Transparent     =   False
       Visible         =   True
       Width           =   40
@@ -1244,6 +1260,7 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   1
+      DarkModeDisabledOverlayColor=   &cFFFFFF7F
       DarkModeDownColor=   &cC7C8C700
       DarkModeDownMask=   1810081791
       DarkModeDownPicture=   0
@@ -1264,47 +1281,48 @@ Begin Window MainWindow
       DarkModeToggledPicture=   0
       DoubleBuffer    =   False
       Down            =   True
-      DownColor       =   &cC7C8C700
       DownCursor      =   6
-      DownMask        =   1810081791
-      DownPicture     =   0
       DownToggled     =   True
-      DownToggledColor=   &cC7C8C700
-      DownToggledMask =   1589739519
-      DownToggledPicture=   0
       Enabled         =   True
       Height          =   24
-      Hover           =   True
-      HoverColor      =   &cC7C8C700
+      Hover           =   False
       HoverCursor     =   6
-      HoverMask       =   1589739519
-      HoverPicture    =   0
-      HoverToggled    =   True
-      HoverToggledColor=   &c0950FF00
-      HoverToggledMask=   1810081791
-      HoverToggledPicture=   0
+      HoverToggled    =   False
       Index           =   -2147483648
       InitialParent   =   ""
-      Left            =   439
+      Left            =   680
+      LightModeDisabledOverlayColor=   &cFFFFFF88
+      LightModeDownColor=   &cCCCCCC00
+      LightModeDownMask=   1810081791
+      LightModeDownPicture=   0
+      LightModeDownToggledColor=   &cCCCCCC00
+      LightModeDownToggledMask=   1589739519
+      LightModeDownToggledPicture=   0
+      LightModeHoverColor=   &cCCCCCC00
+      LightModeHoverMask=   1589739519
+      LightModeHoverPicture=   0
+      LightModeHoverToggledColor=   &c0950FF00
+      LightModeHoverToggledMask=   1810081791
+      LightModeHoverToggledPicture=   0
+      LightModeNormalColor=   &cCCCCCC00
+      LightModeNormalMask=   1589739519
+      LightModeNormalPicture=   0
+      LightModeToggledColor=   &c0950FF00
+      LightModeToggledMask=   1810081791
+      LightModeToggledPicture=   0
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      NormalColor     =   &cC7C8C700
-      NormalMask      =   1589739519
-      NormalPicture   =   0
       Scope           =   0
       Status          =   "IconStatus.Normal"
       TabIndex        =   30
       TabPanelIndex   =   0
       TabStop         =   False
       Toggled         =   True
-      ToggledColor    =   &c0950FF00
-      ToggledMask     =   1810081791
-      ToggledPicture  =   0
       Tooltip         =   ""
-      Top             =   497
+      Top             =   338
       Transparent     =   False
       Visible         =   True
       Width           =   40
@@ -1323,7 +1341,7 @@ Begin Window MainWindow
       InitialParent   =   ""
       InitialValue    =   ""
       Italic          =   False
-      Left            =   18
+      Left            =   20
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1335,11 +1353,11 @@ Begin Window MainWindow
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
-      Top             =   642
+      Top             =   450
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   236
+      Width           =   174
    End
    Begin cCanvasButton ColorCCBtn
       Active          =   False
@@ -1351,6 +1369,7 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   0
+      DarkModeDisabledOverlayColor=   &c000000FF
       DarkModeDownColor=   &cC8000000
       DarkModeDownMask=   1921011711
       DarkModeDownPicture=   0
@@ -1371,50 +1390,51 @@ Begin Window MainWindow
       DarkModeToggledPicture=   0
       DoubleBuffer    =   False
       Down            =   True
-      DownColor       =   &cC8000000
       DownCursor      =   6
-      DownMask        =   1921011711
-      DownPicture     =   0
       DownToggled     =   False
-      DownToggledColor=   &c000000FF
-      DownToggledMask =   0
-      DownToggledPicture=   0
       Enabled         =   True
-      Height          =   34
+      Height          =   24
       Hover           =   True
-      HoverColor      =   &cC8000000
       HoverCursor     =   6
-      HoverMask       =   1921011711
-      HoverPicture    =   0
       HoverToggled    =   False
-      HoverToggledColor=   &c000000FF
-      HoverToggledMask=   0
-      HoverToggledPicture=   0
       Index           =   -2147483648
       InitialParent   =   ""
-      Left            =   266
+      Left            =   206
+      LightModeDisabledOverlayColor=   &cFFFFFF88
+      LightModeDownColor=   &cC8000000
+      LightModeDownMask=   1921011711
+      LightModeDownPicture=   0
+      LightModeDownToggledColor=   &c000000FF
+      LightModeDownToggledMask=   0
+      LightModeDownToggledPicture=   0
+      LightModeHoverColor=   &cC8000000
+      LightModeHoverMask=   1921011711
+      LightModeHoverPicture=   0
+      LightModeHoverToggledColor=   &c000000FF
+      LightModeHoverToggledMask=   0
+      LightModeHoverToggledPicture=   0
+      LightModeNormalColor=   &c0950FF00
+      LightModeNormalMask=   1921011711
+      LightModeNormalPicture=   0
+      LightModeToggledColor=   &c000000FF
+      LightModeToggledMask=   0
+      LightModeToggledPicture=   0
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      NormalColor     =   &c0950FF00
-      NormalMask      =   1921011711
-      NormalPicture   =   0
       Scope           =   0
       Status          =   "IconStatus.Normal"
       TabIndex        =   34
       TabPanelIndex   =   0
       TabStop         =   False
-      Toggled         =   False
-      ToggledColor    =   &c000000FF
-      ToggledMask     =   0
-      ToggledPicture  =   0
+      Toggled         =   True
       Tooltip         =   ""
-      Top             =   631
+      Top             =   448
       Transparent     =   False
       Visible         =   True
-      Width           =   36
+      Width           =   27
    End
    Begin Label LeftLbl
       AllowAutoDeactivate=   True
@@ -1429,7 +1449,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   132
+      Left            =   80
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1445,7 +1465,7 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   64
+      Top             =   163
       Transparent     =   False
       Underline       =   False
       Visible         =   True
@@ -1466,11 +1486,11 @@ Begin Window MainWindow
       FontUnit        =   0
       Format          =   ""
       HasBorder       =   True
-      Height          =   22
+      Height          =   24
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
-      Left            =   184
+      Left            =   132
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1487,7 +1507,7 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   62
+      Top             =   161
       Transparent     =   False
       Underline       =   False
       ValidationMask  =   "####"
@@ -1507,7 +1527,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   132
+      Left            =   80
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1523,7 +1543,7 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   98
+      Top             =   198
       Transparent     =   False
       Underline       =   False
       Visible         =   True
@@ -1544,11 +1564,11 @@ Begin Window MainWindow
       FontUnit        =   0
       Format          =   ""
       HasBorder       =   True
-      Height          =   22
+      Height          =   24
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
-      Left            =   184
+      Left            =   132
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1565,7 +1585,7 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   96
+      Top             =   195
       Transparent     =   False
       Underline       =   False
       ValidationMask  =   "####"
@@ -1585,7 +1605,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   241
+      Left            =   189
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1601,7 +1621,7 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   64
+      Top             =   163
       Transparent     =   False
       Underline       =   False
       Visible         =   True
@@ -1622,11 +1642,11 @@ Begin Window MainWindow
       FontUnit        =   0
       Format          =   ""
       HasBorder       =   True
-      Height          =   22
+      Height          =   24
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
-      Left            =   298
+      Left            =   246
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1643,7 +1663,7 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   62
+      Top             =   161
       Transparent     =   False
       Underline       =   False
       ValidationMask  =   "####"
@@ -1663,7 +1683,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   241
+      Left            =   189
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1679,7 +1699,7 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   98
+      Top             =   198
       Transparent     =   False
       Underline       =   False
       Visible         =   True
@@ -1700,11 +1720,11 @@ Begin Window MainWindow
       FontUnit        =   0
       Format          =   ""
       HasBorder       =   True
-      Height          =   22
+      Height          =   24
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
-      Left            =   298
+      Left            =   245
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1721,22 +1741,14 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   96
+      Top             =   196
       Transparent     =   False
       Underline       =   False
       ValidationMask  =   "####"
       Visible         =   True
       Width           =   40
    End
-   Begin DesktopColorPicker BGColorPicker
-      HasAlpha        =   True
-      Index           =   -2147483648
-      IsVisible       =   False
-      LockedInPosition=   False
-      Scope           =   0
-      TabPanelIndex   =   0
-   End
-   Begin Label Label1
+   Begin Label ColorPictureLbl
       AllowAutoDeactivate=   True
       Bold            =   False
       DataField       =   ""
@@ -1749,7 +1761,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   16
+      Left            =   22
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1761,15 +1773,15 @@ Begin Window MainWindow
       TabIndex        =   36
       TabPanelIndex   =   0
       TabStop         =   True
-      Text            =   "Change color and picture properties:"
+      Text            =   "Color and picture properties:"
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   560
+      Top             =   378
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   238
+      Width           =   174
    End
    Begin Label DCursorLbl
       AllowAutoDeactivate=   True
@@ -1784,7 +1796,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   154
+      Left            =   20
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1800,7 +1812,7 @@ Begin Window MainWindow
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   261
+      Top             =   338
       Transparent     =   False
       Underline       =   False
       Visible         =   True
@@ -1820,7 +1832,7 @@ Begin Window MainWindow
       InitialParent   =   ""
       InitialValue    =   ""
       Italic          =   False
-      Left            =   266
+      Left            =   132
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1832,11 +1844,278 @@ Begin Window MainWindow
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
-      Top             =   261
+      Top             =   340
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   213
+      Width           =   295
+   End
+   Begin Label DisabledOverlaysLbl
+      AllowAutoDeactivate=   True
+      Bold            =   False
+      DataField       =   ""
+      DataSource      =   ""
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      Height          =   20
+      Index           =   -2147483648
+      InitialParent   =   ""
+      Italic          =   False
+      Left            =   486
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      Multiline       =   False
+      Scope           =   0
+      Selectable      =   False
+      TabIndex        =   39
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Text            =   "Disabled Colors:"
+      TextAlignment   =   3
+      TextColor       =   &c00000000
+      Tooltip         =   ""
+      Top             =   378
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   True
+      Width           =   174
+   End
+   Begin cCanvasButton NormalDisabledColorBtn
+      Active          =   False
+      AllowAutoDeactivate=   True
+      AllowFocus      =   False
+      AllowFocusRing  =   False
+      AllowTabs       =   False
+      ArcHeight       =   0
+      ArcWidth        =   0
+      Backdrop        =   0
+      ButtonStyle     =   0
+      DarkModeDisabledOverlayColor=   &c000000FF
+      DarkModeDownColor=   &cC8000000
+      DarkModeDownMask=   1921011711
+      DarkModeDownPicture=   0
+      DarkModeDownToggledColor=   &c000000FF
+      DarkModeDownToggledMask=   0
+      DarkModeDownToggledPicture=   0
+      DarkModeHoverColor=   &cC8000000
+      DarkModeHoverMask=   1921011711
+      DarkModeHoverPicture=   0
+      DarkModeHoverToggledColor=   &c000000FF
+      DarkmodeHoverToggledMask=   0
+      DarkmodeHoverToggledPicture=   0
+      DarkModeNormalColor=   &c0950FF00
+      DarkModeNormalMask=   1921011711
+      DarkModeNormalPicture=   0
+      DarkModeToggledColor=   &c000000FF
+      DarkModeToggledMask=   0
+      DarkModeToggledPicture=   0
+      DoubleBuffer    =   False
+      Down            =   True
+      DownCursor      =   6
+      DownToggled     =   False
+      Enabled         =   True
+      Height          =   24
+      Hover           =   True
+      HoverCursor     =   6
+      HoverToggled    =   False
+      Index           =   -2147483648
+      InitialParent   =   ""
+      Left            =   693
+      LightModeDisabledOverlayColor=   &cFFFFFF88
+      LightModeDownColor=   &cC8000000
+      LightModeDownMask=   1921011711
+      LightModeDownPicture=   0
+      LightModeDownToggledColor=   &c000000FF
+      LightModeDownToggledMask=   0
+      LightModeDownToggledPicture=   0
+      LightModeHoverColor=   &cC8000000
+      LightModeHoverMask=   1921011711
+      LightModeHoverPicture=   0
+      LightModeHoverToggledColor=   &c000000FF
+      LightModeHoverToggledMask=   0
+      LightModeHoverToggledPicture=   0
+      LightModeNormalColor=   &c0950FF00
+      LightModeNormalMask=   1921011711
+      LightModeNormalPicture=   0
+      LightModeToggledColor=   &c000000FF
+      LightModeToggledMask=   0
+      LightModeToggledPicture=   0
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      Scope           =   0
+      Status          =   "IconStatus.Normal"
+      TabIndex        =   40
+      TabPanelIndex   =   0
+      TabStop         =   False
+      Toggled         =   False
+      Tooltip         =   ""
+      Top             =   413
+      Transparent     =   False
+      Visible         =   True
+      Width           =   27
+   End
+   Begin aColorPicker MyColorPicker
+      HasAlpha        =   True
+      Index           =   -2147483648
+      LockedInPosition=   False
+      Scope           =   0
+      TabPanelIndex   =   0
+      WhatToChange    =   ""
+   End
+   Begin Label LightModeDisabledLbl
+      AllowAutoDeactivate=   True
+      Bold            =   False
+      DataField       =   ""
+      DataSource      =   ""
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      Height          =   20
+      Index           =   -2147483648
+      InitialParent   =   ""
+      Italic          =   False
+      Left            =   486
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      Multiline       =   False
+      Scope           =   0
+      Selectable      =   False
+      TabIndex        =   41
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Text            =   "Light Mode Disabled Overlay:"
+      TextAlignment   =   3
+      TextColor       =   &c00000000
+      Tooltip         =   ""
+      Top             =   413
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   True
+      Width           =   179
+   End
+   Begin cCanvasButton NormalDisabledColorBtn1
+      Active          =   False
+      AllowAutoDeactivate=   True
+      AllowFocus      =   False
+      AllowFocusRing  =   False
+      AllowTabs       =   False
+      ArcHeight       =   0
+      ArcWidth        =   0
+      Backdrop        =   0
+      ButtonStyle     =   0
+      DarkModeDisabledOverlayColor=   &c000000FF
+      DarkModeDownColor=   &cC8000000
+      DarkModeDownMask=   1921011711
+      DarkModeDownPicture=   0
+      DarkModeDownToggledColor=   &c000000FF
+      DarkModeDownToggledMask=   0
+      DarkModeDownToggledPicture=   0
+      DarkModeHoverColor=   &cC8000000
+      DarkModeHoverMask=   1921011711
+      DarkModeHoverPicture=   0
+      DarkModeHoverToggledColor=   &c000000FF
+      DarkmodeHoverToggledMask=   0
+      DarkmodeHoverToggledPicture=   0
+      DarkModeNormalColor=   &c0950FF00
+      DarkModeNormalMask=   1921011711
+      DarkModeNormalPicture=   0
+      DarkModeToggledColor=   &c000000FF
+      DarkModeToggledMask=   0
+      DarkModeToggledPicture=   0
+      DoubleBuffer    =   False
+      Down            =   True
+      DownCursor      =   6
+      DownToggled     =   False
+      Enabled         =   True
+      Height          =   24
+      Hover           =   True
+      HoverCursor     =   6
+      HoverToggled    =   False
+      Index           =   -2147483648
+      InitialParent   =   ""
+      Left            =   693
+      LightModeDisabledOverlayColor=   &cFFFFFF88
+      LightModeDownColor=   &cC8000000
+      LightModeDownMask=   1921011711
+      LightModeDownPicture=   0
+      LightModeDownToggledColor=   &c000000FF
+      LightModeDownToggledMask=   0
+      LightModeDownToggledPicture=   0
+      LightModeHoverColor=   &cC8000000
+      LightModeHoverMask=   1921011711
+      LightModeHoverPicture=   0
+      LightModeHoverToggledColor=   &c000000FF
+      LightModeHoverToggledMask=   0
+      LightModeHoverToggledPicture=   0
+      LightModeNormalColor=   &c0950FF00
+      LightModeNormalMask=   1921011711
+      LightModeNormalPicture=   0
+      LightModeToggledColor=   &c000000FF
+      LightModeToggledMask=   0
+      LightModeToggledPicture=   0
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      Scope           =   0
+      Status          =   "IconStatus.Normal"
+      TabIndex        =   42
+      TabPanelIndex   =   0
+      TabStop         =   False
+      Toggled         =   False
+      Tooltip         =   ""
+      Top             =   448
+      Transparent     =   False
+      Visible         =   True
+      Width           =   27
+   End
+   Begin Label DarkModeDisabledLbl
+      AllowAutoDeactivate=   True
+      Bold            =   False
+      DataField       =   ""
+      DataSource      =   ""
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      Height          =   20
+      Index           =   -2147483648
+      InitialParent   =   ""
+      Italic          =   False
+      Left            =   494
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      Multiline       =   False
+      Scope           =   0
+      Selectable      =   False
+      TabIndex        =   43
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Text            =   "Dark Mode Disabled Overlay:"
+      TextAlignment   =   3
+      TextColor       =   &c00000000
+      Tooltip         =   ""
+      Top             =   448
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   True
+      Width           =   174
    End
 End
 #tag EndWindow
@@ -2210,22 +2489,22 @@ End
 		      PreviewCCBtn.DarkModeToggledPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
 		      
 		    Case "DownPicture"
-		      PreviewCCBtn.DownPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
+		      PreviewCCBtn.LightModeDownPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
 		      
 		    Case "DownToggled"
-		      PreviewCCBtn.DownToggledPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
+		      PreviewCCBtn.LightModeDownToggledPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
 		      
 		    Case "Hover"
-		      PreviewCCBtn.HoverPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
+		      PreviewCCBtn.LightModeHoverPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
 		      
 		    Case "HoverToggled"
-		      PreviewCCBtn.HoverToggledPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
+		      PreviewCCBtn.LightModeHoverToggledPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
 		      
 		    Case "Normal"
-		      PreviewCCBtn.NormalPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
+		      PreviewCCBtn.LightModeNormalPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
 		      
 		    Case "Toggled"
-		      PreviewCCBtn.ToggledPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
+		      PreviewCCBtn.LightModeToggledPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
 		      
 		    End Select
 		    
@@ -2311,19 +2590,23 @@ End
 #tag Events ColorCCBtn
 	#tag Event
 		Sub Action()
+		  
 		  If ColorPropertyPopupMenu.SelectedRowIndex > 0 Then
 		    
-		    Var myProperties() As Introspection.PropertyInfo = Introspection.GetType(PreviewCCBtn).GetProperties
+		    Var TheProperties() As Introspection.PropertyInfo = Introspection.GetType(PreviewCCBtn).GetProperties
 		    Var Prop As introspection.PropertyInfo
 		    Var ColorProp As String = ColorPropertyPopupMenu.SelectedRow
 		    
-		    For i As Integer = 0 to myProperties().Count - 1
+		    For i As Integer = 0 to TheProperties().Count - 1
 		      
-		      if myProperties(i).Name = ColorProp then //found the property to change
+		      if TheProperties(i).Name = ColorProp then //found the property to change
 		        
-		        prop = myProperties(i)
+		        prop = TheProperties(i)
+		        
+		        MyColorPicker.WhatToChange = "Background"
 		        Var c  As Color = prop.Value(PreviewCCBtn)
-		        Self.BGColorPicker.Show(c, "Choose a color")
+		        MyColorPicker.Show(c, "Choose a color")
+		        
 		      End if
 		    Next
 		    
@@ -2394,30 +2677,6 @@ End
 		End Sub
 	#tag EndEvent
 #tag EndEvents
-#tag Events BGColorPicker
-	#tag Event
-		Sub ColorSelected(selectedColor As Color)
-		  Var myProperties() As Introspection.PropertyInfo = Introspection.GetType(PreviewCCBtn).GetProperties
-		  Var Prop As introspection.PropertyInfo
-		  Var ColorProp As String = ColorPropertyPopupMenu.SelectedRow
-		  
-		  For i As Integer = 0 to myProperties().Count - 1
-		    
-		    if myProperties(i).Name = ColorProp then //found the property to change
-		      
-		      prop = myProperties(i)
-		      prop.Value(PreviewCCBtn) = SelectedColor
-		      PreviewCCBtn.Invalidate
-		    End if
-		  Next
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub Closed()
-		  ColorPropertyPopupMenu.SelectedRowIndex = 0
-		End Sub
-	#tag EndEvent
-#tag EndEvents
 #tag Events DCursorPopupMenu
 	#tag Event
 		Sub Open()
@@ -2480,6 +2739,54 @@ End
 		  If Self.AllSet Then
 		    PreviewCCBtn.DCursor = PreviewCCBtn.GetCursor(me.SelectedRowIndex)
 		  End if
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events NormalDisabledColorBtn
+	#tag Event
+		Sub Action()
+		  MainWindow.ColorPropertyPopupMenu.SelectedRowIndex = 0
+		  
+		  Var TheProperties() As Introspection.PropertyInfo = Introspection.GetType(PreviewCCBtn).GetProperties
+		  Var Prop As introspection.PropertyInfo
+		  Var ColorProp As String = "LightModeDisabledOverlayColor"
+		  
+		  For i As Integer = 0 to TheProperties().Count - 1
+		    
+		    if TheProperties(i).Name = ColorProp then //found the property to change
+		      
+		      prop = TheProperties(i)
+		      
+		      MyColorPicker.WhatToChange = "LightModeDisabledOverlayColor"
+		      Var c  As Color = prop.Value(PreviewCCBtn)
+		      MyColorPicker.Show(c, "Choose a color")
+		    End if
+		  Next
+		  
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events NormalDisabledColorBtn1
+	#tag Event
+		Sub Action()
+		  MainWindow.ColorPropertyPopupMenu.SelectedRowIndex = 0
+		  
+		  Var TheProperties() As Introspection.PropertyInfo = Introspection.GetType(PreviewCCBtn).GetProperties
+		  Var Prop As introspection.PropertyInfo
+		  Var ColorProp As String = "DarkModeDisabledOverlayColor"
+		  
+		  For i As Integer = 0 to TheProperties().Count - 1
+		    
+		    if TheProperties(i).Name = ColorProp then //found the property to change
+		      
+		      prop = TheProperties(i)
+		      
+		      MyColorPicker.WhatToChange = "DarkModeDisabledOverlayColor"
+		      Var c  As Color = prop.Value(PreviewCCBtn)
+		      MyColorPicker.Show(c, "Choose a color")
+		    End if
+		  Next
+		  
 		End Sub
 	#tag EndEvent
 #tag EndEvents
