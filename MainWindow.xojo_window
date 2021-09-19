@@ -1875,7 +1875,7 @@ Begin Window MainWindow
       TabIndex        =   39
       TabPanelIndex   =   0
       TabStop         =   True
-      Text            =   "Disabled Colors:"
+      Text            =   "Overlays for ""Disabled"":"
       TextAlignment   =   3
       TextColor       =   &c00000000
       Tooltip         =   ""
