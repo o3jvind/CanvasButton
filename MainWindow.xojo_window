@@ -2488,22 +2488,22 @@ End
 		    Case "DarkModeToggled"
 		      PreviewCCBtn.DarkModeToggledPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
 		      
-		    Case "DownPicture"
+		    Case "LightModeDown"
 		      PreviewCCBtn.LightModeDownPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
 		      
-		    Case "DownToggled"
+		    Case "LightModeDownToggled"
 		      PreviewCCBtn.LightModeDownToggledPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
 		      
-		    Case "Hover"
+		    Case "LightModeHover"
 		      PreviewCCBtn.LightModeHoverPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
 		      
-		    Case "HoverToggled"
+		    Case "LightModeHoverToggled"
 		      PreviewCCBtn.LightModeHoverToggledPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
 		      
-		    Case "Normal"
+		    Case "LightModeNormal"
 		      PreviewCCBtn.LightModeNormalPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
 		      
-		    Case "Toggled"
+		    Case "LightModeToggled"
 		      PreviewCCBtn.LightModeToggledPicture = PicturePopUpMenu.RowTagAt(PicturePopUpMenu.SelectedRowIndex)
 		      
 		    End Select
