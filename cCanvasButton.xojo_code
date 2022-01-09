@@ -119,6 +119,7 @@ Inherits Canvas
 	#tag Event
 		Sub Paint(g As Graphics, areas() As REALbasic.Rect)
 		  Var p As Picture
+		  Var ps As Picture
 		  
 		  Select Case Status
 		    
@@ -167,7 +168,6 @@ Inherits Canvas
 		  End Select
 		  
 		  If Me.Enabled = False Then
-		    Var OverLayColor As Color
 		    If Color.IsDarkMode Then
 		      p.Graphics.DrawingColor = DarkModeDisabledOverlayColor
 		    Else
@@ -176,14 +176,35 @@ Inherits Canvas
 		    p.Graphics.FillRoundRectangle(0, 0, p.Graphics.Width, p.Graphics.Height, Me.ArcWidth, Me.ArcHeight)
 		  End if
 		  
-		  g.DrawPicture(p, 0, 0)
+		  ps = CreateImageSet(p)
+		  
+		  
+		  g.DrawPicture(ps, 0, 0)
 		End Sub
 	#tag EndEvent
 
 
 	#tag Method, Flags = &h0
+		Function CreateImageSet(InPic As Picture) As Picture
+		  Var SmallPic As New Picture(InPic.Width / 2, InPic.Height / 2)
+		  SmallPic.Graphics.DrawPicture(InPic, 0, 0, InPic.Width / 2, InPic.Height / 2, 0, 0, InPic.Width, InPic.Height)
+		  Var BigPic As New Picture(InPic.Width, InPic.Height)
+		  BigPic.Graphics.DrawPicture(InPic, 0, 0, InPic.Width, InPic.Height, 0, 0, InPic.Width, InPic.Height)
+		  
+		  Var BitMaps() As Picture
+		  BitMaps.Append(SmallPic)
+		  BitMaps.Append(BigPic)
+		  
+		  Var PicSet As New Picture(InPic.Width / 2, InPic.Height / 2, BitMaps())
+		  
+		  Return PicSet
+		  
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Function CreatePicture(p As Picture, mp As Picture, c As Color) As Picture
-		  Var OutP As New Picture(Me.Width, Me.Height)
+		  Var OutP As New Picture(Me.Width * 2, Me.Height * 2)
 		  
 		  //Fil the picture with the selected color
 		  OutP.Graphics.DrawingColor = c
@@ -197,7 +218,7 @@ Inherits Canvas
 		  //Resize the mask picure to fit and draw it to the canvas
 		  If mp <> NIL Then
 		    //Create a new picture to draw the mask in the correct dimensions
-		    Var mpOut As New Picture(Me.Width, Me.Height, 32)
+		    Var mpOut As New Picture(Me.Width *2, Me.Height * 2, 32)
 		    mpOut.Graphics.DrawPicture(mp, 0, 0, mpOut.Graphics.Width, mpOut.Height, 0, 0, mp.Width, mp.Height)
 		    OutP.ApplyMask(mpOut)
 		  End if
