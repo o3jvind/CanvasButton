@@ -4,7 +4,7 @@ Inherits DesktopColorPicker
 	#tag Event
 		Sub Closed()
 		  Me.WhatToChange = ""
-		  MainWindow.ColorPropertyPopupMenu.SelectedRowIndex = 0
+		  MainWindow.ButtonModePopupMenu.SelectedRowIndex = 0
 		End Sub
 	#tag EndEvent
 
@@ -13,47 +13,79 @@ Inherits DesktopColorPicker
 		  Var TheProperties() As Introspection.PropertyInfo = Introspection.GetType(MainWindow.PreviewCCBtn).GetProperties
 		  Var Prop As introspection.PropertyInfo
 		  
-		  
-		  
-		  If Me.WhatToChange = "Background" Then
+		  Select Case Me.WhatToChange
 		    
-		    Var ColorProp As String = MainWindow.ColorPropertyPopupMenu.SelectedRow
+		  Case "Background"
+		    
+		    Var ColorProp As String = MainWindow.ButtonModePopupMenu.RowTagAt(MainWindow.ButtonModePopupMenu.SelectedRowIndex) + "Color"
 		    
 		    For i As Integer = 0 to TheProperties().Count - 1
 		      
-		      if TheProperties(i).Name = ColorProp then //found the property to change
-		        
+		      If TheProperties(i).Name = ColorProp Then //found the property to change
 		        prop = TheProperties(i)
 		        prop.Value(MainWindow.PreviewCCBtn) = SelectedColor
 		        MainWindow.PreviewCCBtn.Invalidate
-		        
 		      End if
 		    Next
-		  End if
-		  
-		  If Me.WhatToChange = "LightModeDisabledOverlayColor" Then
+		    
+		  Case "Mask"
+		    
+		    Var ColorProp As String = MainWindow.ButtonModePopupMenu.RowTagAt(MainWindow.ButtonModePopupMenu.SelectedRowIndex) + "MaskColor"
+		    
 		    For i As Integer = 0 to TheProperties().Count - 1
 		      
-		      if TheProperties(i).Name = "LightModeDisabledOverlayColor" then 
-		        
+		      If TheProperties(i).Name = ColorProp Then //found the property to change
 		        prop = TheProperties(i)
 		        prop.Value(MainWindow.PreviewCCBtn) = SelectedColor
 		        MainWindow.PreviewCCBtn.Invalidate
 		      End if
 		    Next
-		  End if
-		  
-		  If Me.WhatToChange = "DarkModeDisabledOverlayColor" Then
+		    
+		  Case "LightModeDisabledOverlayColor"
 		    For i As Integer = 0 to TheProperties().Count - 1
 		      
-		      if TheProperties(i).Name = "DarkModeDisabledOverlayColor" then 
+		      If TheProperties(i).Name = "LightModeDisabledOverlayColor" Then 
+		        prop = TheProperties(i)
+		        prop.Value(MainWindow.PreviewCCBtn) = SelectedColor
+		        MainWindow.PreviewCCBtn.Invalidate
+		      End if
+		    Next
+		    
+		    
+		  Case "DarkModeDisabledOverlayColor"
+		    For i As Integer = 0 to TheProperties().Count - 1
+		      
+		      If TheProperties(i).Name = "DarkModeDisabledOverlayColor" Then
+		        prop = TheProperties(i)
+		        prop.Value(MainWindow.PreviewCCBtn) = SelectedColor
+		        MainWindow.PreviewCCBtn.Invalidate
+		      End if
+		    Next
+		    
+		    
+		  Case "LightModeDisabledMaskColor"
+		    For i As Integer = 0 to TheProperties().Count - 1
+		      
+		      If TheProperties(i).Name = "LightModeDisabledMaskColor" Then 
+		        prop = TheProperties(i)
+		        prop.Value(MainWindow.PreviewCCBtn) = SelectedColor
+		        MainWindow.PreviewCCBtn.Invalidate
+		      End if
+		    Next
+		    
+		    
+		  Case "DarkModeDisabledMaskColor"
+		    For i As Integer = 0 to TheProperties().Count - 1
+		      
+		      If TheProperties(i).Name = "DarkModeDisabledMaskColor" Then
 		        
 		        prop = TheProperties(i)
 		        prop.Value(MainWindow.PreviewCCBtn) = SelectedColor
 		        MainWindow.PreviewCCBtn.Invalidate
 		      End if
 		    Next
-		  End if
+		    
+		  End Select
 		End Sub
 	#tag EndEvent
 

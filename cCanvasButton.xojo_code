@@ -125,56 +125,49 @@ Inherits Canvas
 		    
 		  Case IconStatus.Normal
 		    If Color.IsDarkMode Then
-		      p = Me.CreatePicture(Me.DarkModeNormalPicture, Me.DarkModeNormalMask, DarkModeNormalColor)
+		      p = Me.CreatePicture(Me.DarkModeNormalPicture, Me.DarkModeNormalMask, Me.DarkModeNormalColor, DarkModeNormalMaskColor)
 		    Else
-		      p = Me.CreatePicture(Me.LightModeNormalPicture, Me.LightModeNormalMask, LightModeNormalColor)
+		      p = Me.CreatePicture(Me.LightModeNormalPicture, Me.LightModeNormalMask, Me.LightModeNormalColor, LightModeNormalMaskColor)
 		    End If
 		    
 		  Case IconStatus.Hover
 		    If Color.IsDarkMode Then
-		      p = Me.CreatePicture(Me.DarkModeHoverPicture, Me.DarkModeHoverMask, Me.DarkModeHoverColor)
+		      p = Me.CreatePicture(Me.DarkModeHoverPicture, Me.DarkModeHoverMask, Me.DarkModeHoverColor, Me.DarkModeHoverMaskColor)
 		    Else
-		      p = Me.CreatePicture(Me.LightModeHoverPicture, Me.LightModeHoverMask, Me.LightModeHoverColor)
+		      p = Me.CreatePicture(Me.LightModeHoverPicture, Me.LightModeHoverMask, Me.LightModeHoverColor, Me.LightModeHoverMaskColor)
 		    End if
 		    
 		  Case IconStatus.Down
 		    If Color.IsDarkMode Then
-		      p = Me.CreatePicture(Me.DarkModeDownPicture, Me.DarkModeDownMask, Me.DarkModeDownColor)
+		      p = Me.CreatePicture(Me.DarkModeDownPicture, Me.DarkModeDownMask, Me.DarkModeDownColor, Me.DarkModeDownMaskColor)
 		    Else
-		      p = Me.CreatePicture(Me.LightModeDownPicture, Me.LightModeDownMask, Me.LightModeDownColor)
+		      p = Me.CreatePicture(Me.LightModeDownPicture, Me.LightModeDownMask, Me.LightModeDownColor, Me.LightModeDownMaskColor)
 		    End if
 		    
 		  Case IconStatus.Toggled
 		    If Color.IsDarkMode Then
-		      p = Me.CreatePicture(Me.DarkModeToggledPicture, Me.DarkModeToggledMask, Me.DarkModeToggledColor)
+		      p = Me.CreatePicture(Me.DarkModeToggledPicture, Me.DarkModeToggledMask, Me.DarkModeToggledColor, Me.DarkModeToggledMaskColor)
 		    Else
-		      p = Me.CreatePicture(Me.LightModeToggledPicture, Me.LightModeToggledMask, Me.LightModeToggledColor)
+		      p = Me.CreatePicture(Me.LightModeToggledPicture, Me.LightModeToggledMask, Me.LightModeToggledColor, Me.LightModeToggledMaskColor)
 		    End if
 		    
 		  Case IconStatus.HoverToggled
 		    If Color.IsDarkMode Then
-		      p = Me.CreatePicture(Me.DarkModeHoverToggledPicture, Me.DarkModeHoverToggledMask, Me.DarkModeHoverToggledColor)
+		      p = Me.CreatePicture(Me.DarkModeHoverToggledPicture, Me.DarkModeHoverToggledMask, Me.DarkModeHoverToggledColor, Me.DarkModeHoverToggledMaskColor)
 		    Else
-		      p = Me.CreatePicture(Me.LightModeHoverToggledPicture, Me.LightModeHoverToggledMask, Me.LightModeHoverToggledColor)
+		      p = Me.CreatePicture(Me.LightModeHoverToggledPicture, Me.LightModeHoverToggledMask, Me.LightModeHoverToggledColor, Me.LightModeHoverToggledMaskColor)
 		    End if
 		    
 		  Case IconStatus.DownToggled
 		    If Color.IsDarkMode Then
-		      p = Me.CreatePicture(Me.DarkModeDownToggledPicture, Me.DarkModeDownToggledMask, Me.DarkModeDownToggledColor)
+		      p = Me.CreatePicture(Me.DarkModeDownToggledPicture, Me.DarkModeDownToggledMask, Me.DarkModeDownToggledColor, Me.DarkModeDownToggledMaskColor)
 		    Else
-		      p = Me.CreatePicture(Me.LightModeDownToggledPicture, Me.LightModeDownToggledMask, Me.LightModeDownToggledColor)
+		      p = Me.CreatePicture(Me.LightModeDownToggledPicture, Me.LightModeDownToggledMask, Me.LightModeDownToggledColor, Me.LightModeDownToggledMaskColor)
 		    End if
 		    
 		  End Select
 		  
-		  If Me.Enabled = False Then
-		    If Color.IsDarkMode Then
-		      p.Graphics.DrawingColor = DarkModeDisabledOverlayColor
-		    Else
-		      p.Graphics.DrawingColor = LightModeDisabledOverlayColor
-		    End if
-		    p.Graphics.FillRoundRectangle(0, 0, p.Graphics.Width, p.Graphics.Height, Me.ArcWidth, Me.ArcHeight)
-		  End if
+		  
 		  
 		  ps = CreateImageSet(p)
 		  
@@ -185,16 +178,26 @@ Inherits Canvas
 
 
 	#tag Method, Flags = &h0
+		Sub ComposePicture()
+		  
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Function CreateImageSet(InPic As Picture) As Picture
+		  //Create two pictures with the content of the inPic
 		  Var SmallPic As New Picture(InPic.Width / 2, InPic.Height / 2)
 		  SmallPic.Graphics.DrawPicture(InPic, 0, 0, InPic.Width / 2, InPic.Height / 2, 0, 0, InPic.Width, InPic.Height)
+		  
 		  Var BigPic As New Picture(InPic.Width, InPic.Height)
 		  BigPic.Graphics.DrawPicture(InPic, 0, 0, InPic.Width, InPic.Height, 0, 0, InPic.Width, InPic.Height)
 		  
+		  //Create an array with the pics
 		  Var BitMaps() As Picture
 		  BitMaps.Append(SmallPic)
 		  BitMaps.Append(BigPic)
 		  
+		  //Create a picture(set) with the pictures and return it
 		  Var PicSet As New Picture(InPic.Width / 2, InPic.Height / 2, BitMaps())
 		  
 		  Return PicSet
@@ -203,8 +206,9 @@ Inherits Canvas
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
-		Function CreatePicture(p As Picture, mp As Picture, c As Color) As Picture
-		  Var OutP As New Picture(Me.Width * 2, Me.Height * 2)
+		Function CreatePicture(p As Picture, mp As Picture, c As Color, mc As Color) As Picture
+		  Var OutP As New Picture(Me.Width * 2, Me.Height * 2, 32)
+		  Var mpOut As New Picture(Me.Width *2, Me.Height * 2, 32)
 		  
 		  //Fil the picture with the selected color
 		  OutP.Graphics.DrawingColor = c
@@ -215,16 +219,33 @@ Inherits Canvas
 		    OutP.Graphics.DrawPicture(p, 0, 0, OutP.Graphics.Width, OutP.Graphics.Height, 0, 0, p.Width, p.Height)
 		  End if
 		  
-		  //Resize the mask picure to fit and draw it to the canvas
+		  //Fill the mask picture with the mask color
+		  mpOut.Graphics.DrawingColor = mc
+		  mpOut.Graphics.FillRoundRectangle(0, 0, mpOut.Width, mpOut.height, Me.ArcWidth, Me.ArcHeight)
+		  
+		  //If set, resize a mask picure to fit and draw it to the mask picture graphics
 		  If mp <> NIL Then
 		    //Create a new picture to draw the mask in the correct dimensions
-		    Var mpOut As New Picture(Me.Width *2, Me.Height * 2, 32)
 		    mpOut.Graphics.DrawPicture(mp, 0, 0, mpOut.Graphics.Width, mpOut.Height, 0, 0, mp.Width, mp.Height)
-		    OutP.ApplyMask(mpOut)
 		  End if
 		  
-		  Return OutP
+		  If Me.Enabled = False Then
+		    Var DmpOut As New Picture(Me.Width *2, Me.Height * 2, 32)
+		    If Color.IsDarkMode Then
+		      outP.Graphics.DrawingColor = DarkModeDisabledOverlayColor
+		      DmpOut.Graphics.DrawingColor = DarkModeDisabledMaskColor
+		      DmpOut.Graphics.FillRoundRectangle(0, 0, DmpOut.Graphics.Width, DmpOut.Graphics.Height, Me.ArcWidth, Me.ArcHeight)
+		    Else
+		      outP.Graphics.DrawingColor = LightModeDisabledOverlayColor
+		      DmpOut.Graphics.DrawingColor = LightModeDisabledMaskColor
+		      DmpOut.Graphics.FillRoundRectangle(0, 0, DmpOut.Graphics.Width, DmpOut.Graphics.Height, Me.ArcWidth, Me.ArcHeight)
+		    End if
+		    mpOut.ApplyMask(DmpOut)
+		    outP.Graphics.FillRoundRectangle(0, 0, outP.Graphics.Width, outP.Graphics.Height, Me.ArcWidth, Me.ArcHeight)
+		  End if
 		  
+		  OutP.ApplyMask(mpOut)
+		  Return OutP
 		  
 		  
 		End Function
@@ -302,6 +323,14 @@ Inherits Canvas
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
+		CurrentPic As Picture
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		DarkModeDisabledMaskColor As Color = &c00000000
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		DarkModeDisabledOverlayColor As Color = &cFFFFFF88
 	#tag EndProperty
 
@@ -311,6 +340,10 @@ Inherits Canvas
 
 	#tag Property, Flags = &h0
 		DarkModeDownMask As Picture
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		DarkModeDownMaskColor As Color = &c00000000
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
@@ -326,6 +359,10 @@ Inherits Canvas
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
+		DarkModeDownToggledMaskColor As Color = &c00000000
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		DarkModeDownToggledPicture As Picture
 	#tag EndProperty
 
@@ -335,6 +372,10 @@ Inherits Canvas
 
 	#tag Property, Flags = &h0
 		DarkModeHoverMask As Picture
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		DarkModeHoverMaskColor As Color = &c00000000
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
@@ -350,6 +391,10 @@ Inherits Canvas
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
+		DarkModeHoverToggledMaskColor As Color = &c00000000
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		DarkmodeHoverToggledPicture As Picture
 	#tag EndProperty
 
@@ -362,6 +407,10 @@ Inherits Canvas
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
+		DarkModeNormalMaskColor As Color = &c00000000
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		DarkModeNormalPicture As Picture
 	#tag EndProperty
 
@@ -371,6 +420,10 @@ Inherits Canvas
 
 	#tag Property, Flags = &h0
 		DarkModeToggledMask As Picture
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		DarkModeToggledMaskColor As Color = &c00000000
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
@@ -410,6 +463,10 @@ Inherits Canvas
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
+		LightModeDisabledMaskColor As Color = &c00000000
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		LightModeDisabledOverlayColor As Color = &cFFFFFF88
 	#tag EndProperty
 
@@ -419,6 +476,10 @@ Inherits Canvas
 
 	#tag Property, Flags = &h0
 		LightModeDownMask As Picture
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		LightModeDownMaskColor As Color = &c00000000
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
@@ -434,6 +495,10 @@ Inherits Canvas
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
+		LightModeDownToggledMaskColor As Color = &c00000000
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		LightModeDownToggledPicture As Picture
 	#tag EndProperty
 
@@ -443,6 +508,10 @@ Inherits Canvas
 
 	#tag Property, Flags = &h0
 		LightModeHoverMask As Picture
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		LightModeHoverMaskColor As Color = &c00000000
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
@@ -458,6 +527,10 @@ Inherits Canvas
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
+		LightModeHoverToggledMaskColor As Color = &c00000000
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		LightModeHoverToggledPicture As Picture
 	#tag EndProperty
 
@@ -470,6 +543,10 @@ Inherits Canvas
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
+		LightModeNormalMaskColor As Color = &c00000000
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		LightModeNormalPicture As Picture
 	#tag EndProperty
 
@@ -479,6 +556,10 @@ Inherits Canvas
 
 	#tag Property, Flags = &h0
 		LightModeToggledMask As Picture
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		LightModeToggledMaskColor As Color = &c00000000
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
@@ -805,10 +886,34 @@ Inherits Canvas
 			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
+			Name="LightModeDisabledMaskColor"
+			Visible=true
+			Group="Disabled Overlay Color"
+			InitialValue="&c00000000"
+			Type="Color"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="DarkModeDisabledMaskColor"
+			Visible=true
+			Group="Disabled Overlay Color"
+			InitialValue="&c00000000"
+			Type="Color"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
 			Name="LightModeNormalColor"
 			Visible=true
 			Group="Normal"
 			InitialValue="&c000000FF"
+			Type="Color"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="LightModeNormalMaskColor"
+			Visible=true
+			Group="Normal"
+			InitialValue="&c00000000"
 			Type="Color"
 			EditorType=""
 		#tag EndViewProperty
@@ -837,6 +942,14 @@ Inherits Canvas
 			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
+			Name="DarkModeNormalMaskColor"
+			Visible=true
+			Group="Normal"
+			InitialValue="&c00000000"
+			Type="Color"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
 			Name="DarkModeNormalPicture"
 			Visible=true
 			Group="Normal"
@@ -857,6 +970,14 @@ Inherits Canvas
 			Visible=true
 			Group="Hover"
 			InitialValue="&c000000FF"
+			Type="Color"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="LightModeHoverMaskColor"
+			Visible=true
+			Group="Hover"
+			InitialValue="&c00000000"
 			Type="Color"
 			EditorType=""
 		#tag EndViewProperty
@@ -885,6 +1006,14 @@ Inherits Canvas
 			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
+			Name="DarkModeHoverMaskColor"
+			Visible=true
+			Group="Hover"
+			InitialValue="&c00000000"
+			Type="Color"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
 			Name="DarkModeHoverPicture"
 			Visible=true
 			Group="Hover"
@@ -905,6 +1034,14 @@ Inherits Canvas
 			Visible=true
 			Group="Down"
 			InitialValue="&c000000FF"
+			Type="Color"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="LightModeDownMaskColor"
+			Visible=true
+			Group="Down"
+			InitialValue="&c00000000"
 			Type="Color"
 			EditorType=""
 		#tag EndViewProperty
@@ -933,6 +1070,14 @@ Inherits Canvas
 			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
+			Name="DarkModeDownMaskColor"
+			Visible=true
+			Group="Down"
+			InitialValue="&c00000000"
+			Type="Color"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
 			Name="DarkModeDownPicture"
 			Visible=true
 			Group="Down"
@@ -953,6 +1098,14 @@ Inherits Canvas
 			Visible=true
 			Group="Toggled"
 			InitialValue="&c000000FF"
+			Type="Color"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="LightModeToggledMaskColor"
+			Visible=true
+			Group="Toggled"
+			InitialValue="&c00000000"
 			Type="Color"
 			EditorType=""
 		#tag EndViewProperty
@@ -981,6 +1134,14 @@ Inherits Canvas
 			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
+			Name="DarkModeToggledMaskColor"
+			Visible=true
+			Group="Toggled"
+			InitialValue="&c00000000"
+			Type="Color"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
 			Name="DarkModeToggledPicture"
 			Visible=true
 			Group="Toggled"
@@ -1001,6 +1162,14 @@ Inherits Canvas
 			Visible=true
 			Group="Hover Toggled"
 			InitialValue="&c000000FF"
+			Type="Color"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="LightModeHoverToggledMaskColor"
+			Visible=true
+			Group="Hover Toggled"
+			InitialValue="&c00000000"
 			Type="Color"
 			EditorType=""
 		#tag EndViewProperty
@@ -1029,6 +1198,14 @@ Inherits Canvas
 			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
+			Name="DarkModeHoverToggledMaskColor"
+			Visible=true
+			Group="Hover Toggled"
+			InitialValue="&c00000000"
+			Type="Color"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
 			Name="DarkmodeHoverToggledPicture"
 			Visible=true
 			Group="Hover Toggled"
@@ -1053,6 +1230,14 @@ Inherits Canvas
 			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
+			Name="LightModeDownToggledMaskColor"
+			Visible=true
+			Group="Down Toggled"
+			InitialValue="&c00000000"
+			Type="Color"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
 			Name="LightModeDownToggledPicture"
 			Visible=true
 			Group="Down Toggled"
@@ -1073,6 +1258,14 @@ Inherits Canvas
 			Visible=true
 			Group="Down Toggled"
 			InitialValue="&c000000FF"
+			Type="Color"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="DarkModeDownToggledMaskColor"
+			Visible=true
+			Group="Down Toggled"
+			InitialValue="&c00000000"
 			Type="Color"
 			EditorType=""
 		#tag EndViewProperty
