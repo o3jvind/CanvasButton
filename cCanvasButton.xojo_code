@@ -1,8 +1,8 @@
 #tag Class
 Protected Class cCanvasButton
-Inherits Canvas
+Inherits DesktopCanvas
 	#tag Event
-		Function MouseDown(X As Integer, Y As Integer) As Boolean
+		Function MouseDown(x As Integer, y As Integer) As Boolean
 		  //Check "Active" status
 		  If Me.Active Then
 		    If Me.DownToggled Then Me.Status = IconStatus.DownToggled
@@ -12,8 +12,8 @@ Inherits Canvas
 		  
 		  //Change to cursor to down cursor
 		  Me.MouseCursor = Me.DCursor
+		  ComposePic()
 		  
-		  Me.Invalidate
 		  
 		  //Pass it to the MouseUp event
 		  Return True
@@ -41,8 +41,8 @@ Inherits Canvas
 		  
 		  //And change mouse to hover
 		  Me.MouseCursor = Me.HCursor
+		  ComposePic()
 		  
-		  Me.Invalidate
 		End Sub
 	#tag EndEvent
 
@@ -54,8 +54,8 @@ Inherits Canvas
 		  Else
 		    Me.Status = IconStatus.Normal
 		  End if
+		  ComposePic()
 		  
-		  Me.Invalidate
 		  
 		  //Restore Cursor to the saved cursor on enter
 		  Me.MouseCursor = Me.AppCursor
@@ -64,7 +64,7 @@ Inherits Canvas
 	#tag EndEvent
 
 	#tag Event
-		Sub MouseUp(X As Integer, Y As Integer)
+		Sub MouseUp(x As Integer, y As Integer)
 		  If X > 0 And X < Self.Width And Y > 0 And Y < Self.Height Then
 		    
 		    //Check if the is a toggle or sticky button and switch status
@@ -88,8 +88,8 @@ Inherits Canvas
 		    
 		    //And change mouse to hover
 		    Me.MouseCursor = Me.HCursor
+		    ComposePic()
 		    
-		    Me.Invalidate
 		    
 		    
 		    
@@ -100,7 +100,7 @@ Inherits Canvas
 	#tag EndEvent
 
 	#tag Event
-		Sub Open()
+		Sub Opening()
 		  // Set the status
 		  If Me.Active Then
 		    If me.Toggled Then Me.Status = IconStatus.Toggled
@@ -111,15 +111,22 @@ Inherits Canvas
 		  //Set the cursor for Hover & Down
 		  Me.HCursor = Me.GetCursor(Me.HoverCursor)
 		  Me.DCursor = Me.GetCursor(Me.DownCursor)
+		  ComposePic()
 		  
-		  RaiseEvent Open
+		  RaiseEvent Opening
 		End Sub
 	#tag EndEvent
 
 	#tag Event
-		Sub Paint(g As Graphics, areas() As REALbasic.Rect)
+		Sub Paint(g As Graphics, areas() As Rect)
+		  g.DrawPicture(Me.CurrentPic, 0, 0)
+		End Sub
+	#tag EndEvent
+
+
+	#tag Method, Flags = &h0
+		Sub ComposePic()
 		  Var p As Picture
-		  Var ps As Picture
 		  
 		  Select Case Status
 		    
@@ -168,18 +175,8 @@ Inherits Canvas
 		  End Select
 		  
 		  
-		  
-		  ps = CreateImageSet(p)
-		  
-		  
-		  g.DrawPicture(ps, 0, 0)
-		End Sub
-	#tag EndEvent
-
-
-	#tag Method, Flags = &h0
-		Sub ComposePicture()
-		  
+		  Me.CurrentPic = CreateImageSet(p)
+		  Me.Refresh(False)
 		End Sub
 	#tag EndMethod
 
@@ -298,7 +295,7 @@ Inherits Canvas
 	#tag EndHook
 
 	#tag Hook, Flags = &h0
-		Event Open()
+		Event Opening()
 	#tag EndHook
 
 
@@ -1334,19 +1331,11 @@ Inherits Canvas
 			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
-			Name="DoubleBuffer"
+			Name="CurrentPic"
 			Visible=false
 			Group="Behavior"
-			InitialValue="False"
-			Type="Boolean"
-			EditorType=""
-		#tag EndViewProperty
-		#tag ViewProperty
-			Name="InitialParent"
-			Visible=false
-			Group=""
 			InitialValue=""
-			Type="String"
+			Type="Picture"
 			EditorType=""
 		#tag EndViewProperty
 	#tag EndViewBehavior

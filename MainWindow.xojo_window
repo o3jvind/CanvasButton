@@ -326,6 +326,7 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   1
+      CurrentPic      =   0
       DarkModeDisabledMaskColor=   &c00000000
       DarkModeDisabledOverlayColor=   &cFFFFFF7F
       DarkModeDownColor=   &c00000000
@@ -352,7 +353,6 @@ Begin Window MainWindow
       DarkModeToggledMask=   1810081791
       DarkModeToggledMaskColor=   &c000000FF
       DarkModeToggledPicture=   0
-      DoubleBuffer    =   False
       Down            =   True
       DownCursor      =   6
       DownToggled     =   True
@@ -484,6 +484,7 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   1
+      CurrentPic      =   0
       DarkModeDisabledMaskColor=   &c00000000
       DarkModeDisabledOverlayColor=   &cFFFFFF7E
       DarkModeDownColor=   &cC8000000
@@ -510,7 +511,6 @@ Begin Window MainWindow
       DarkModeToggledMask=   1810081791
       DarkModeToggledMaskColor=   &c000000FF
       DarkModeToggledPicture=   0
-      DoubleBuffer    =   False
       Down            =   True
       DownCursor      =   6
       DownToggled     =   True
@@ -610,6 +610,7 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   1
+      CurrentPic      =   0
       DarkModeDisabledMaskColor=   &c00000000
       DarkModeDisabledOverlayColor=   &cFEFFFE7F
       DarkModeDownColor=   &cDB00FF00
@@ -636,7 +637,6 @@ Begin Window MainWindow
       DarkModeToggledMask=   1810081791
       DarkModeToggledMaskColor=   &c000000FF
       DarkModeToggledPicture=   0
-      DoubleBuffer    =   False
       Down            =   True
       DownCursor      =   6
       DownToggled     =   True
@@ -806,6 +806,7 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   1
+      CurrentPic      =   0
       DarkModeDisabledMaskColor=   &c00000000
       DarkModeDisabledOverlayColor=   &c000000FF
       DarkModeDownColor=   &cDB00FF00
@@ -832,7 +833,6 @@ Begin Window MainWindow
       DarkModeToggledMask=   1810081791
       DarkModeToggledMaskColor=   &c000000FF
       DarkModeToggledPicture=   0
-      DoubleBuffer    =   False
       Down            =   True
       DownCursor      =   6
       DownToggled     =   True
@@ -932,6 +932,7 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   1
+      CurrentPic      =   0
       DarkModeDisabledMaskColor=   &c00000000
       DarkModeDisabledOverlayColor=   &cFFFFFF7F
       DarkModeDownColor=   &c00B30000
@@ -958,7 +959,6 @@ Begin Window MainWindow
       DarkModeToggledMask=   1810081791
       DarkModeToggledMaskColor=   &c000000FF
       DarkModeToggledPicture=   0
-      DoubleBuffer    =   False
       Down            =   True
       DownCursor      =   6
       DownToggled     =   True
@@ -1067,6 +1067,7 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   0
+      CurrentPic      =   0
       DarkModeDisabledMaskColor=   &c00000000
       DarkModeDisabledOverlayColor=   &c000000FF
       DarkModeDownColor=   &cC8000000
@@ -1093,7 +1094,6 @@ Begin Window MainWindow
       DarkModeToggledMask=   0
       DarkModeToggledMaskColor=   &c00000000
       DarkModeToggledPicture=   0
-      DoubleBuffer    =   False
       Down            =   True
       DownCursor      =   6
       DownToggled     =   False
@@ -1158,6 +1158,7 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   1
+      CurrentPic      =   0
       DarkModeDisabledMaskColor=   &c00000000
       DarkModeDisabledOverlayColor=   &cFFFFFF7F
       DarkModeDownColor=   &cFF890000
@@ -1184,7 +1185,6 @@ Begin Window MainWindow
       DarkModeToggledMask=   1810081791
       DarkModeToggledMaskColor=   &c000000FF
       DarkModeToggledPicture=   0
-      DoubleBuffer    =   False
       Down            =   True
       DownCursor      =   6
       DownToggled     =   True
@@ -1249,6 +1249,7 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   1
+      CurrentPic      =   0
       DarkModeDisabledMaskColor=   &c00000000
       DarkModeDisabledOverlayColor=   &cFFFFFF7F
       DarkModeDownColor=   &cC7C8C700
@@ -1275,7 +1276,6 @@ Begin Window MainWindow
       DarkModeToggledMask=   1810081791
       DarkModeToggledMaskColor=   &c000000FF
       DarkModeToggledPicture=   0
-      DoubleBuffer    =   False
       Down            =   True
       DownCursor      =   6
       DownToggled     =   True
@@ -1789,6 +1789,7 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   0
+      CurrentPic      =   0
       DarkModeDisabledMaskColor=   &c00000000
       DarkModeDisabledOverlayColor=   &c000000FF
       DarkModeDownColor=   &cC8000000
@@ -1815,7 +1816,6 @@ Begin Window MainWindow
       DarkModeToggledMask=   0
       DarkModeToggledMaskColor=   &c00000000
       DarkModeToggledPicture=   0
-      DoubleBuffer    =   False
       Down            =   True
       DownCursor      =   6
       DownToggled     =   False
@@ -1923,6 +1923,7 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   0
+      CurrentPic      =   0
       DarkModeDisabledMaskColor=   &c00000000
       DarkModeDisabledOverlayColor=   &c000000FF
       DarkModeDownColor=   &cC8000000
@@ -1949,7 +1950,6 @@ Begin Window MainWindow
       DarkModeToggledMask=   0
       DarkModeToggledMaskColor=   &c00000000
       DarkModeToggledPicture=   0
-      DoubleBuffer    =   False
       Down            =   True
       DownCursor      =   6
       DownToggled     =   False
@@ -2049,6 +2049,7 @@ Begin Window MainWindow
       ArcWidth        =   60
       Backdrop        =   0
       ButtonStyle     =   1
+      CurrentPic      =   0
       DarkModeDisabledMaskColor=   &c00000000
       DarkModeDisabledOverlayColor=   &cFFFFFF7F
       DarkModeDownColor=   &cCCCCCC00
@@ -2075,7 +2076,6 @@ Begin Window MainWindow
       DarkModeToggledMask=   0
       DarkModeToggledMaskColor=   &c00000000
       DarkModeToggledPicture=   1609400319
-      DoubleBuffer    =   False
       Down            =   True
       DownCursor      =   7
       DownToggled     =   True
@@ -2140,6 +2140,7 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   0
+      CurrentPic      =   0
       DarkModeDisabledMaskColor=   &c00000000
       DarkModeDisabledOverlayColor=   &c000000FF
       DarkModeDownColor=   &cC8000000
@@ -2166,7 +2167,6 @@ Begin Window MainWindow
       DarkModeToggledMask=   0
       DarkModeToggledMaskColor=   &c00000000
       DarkModeToggledPicture=   0
-      DoubleBuffer    =   False
       Down            =   True
       DownCursor      =   6
       DownToggled     =   False
@@ -2266,6 +2266,7 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   0
+      CurrentPic      =   0
       DarkModeDisabledMaskColor=   &c00000000
       DarkModeDisabledOverlayColor=   &c000000FF
       DarkModeDownColor=   &cC8000000
@@ -2292,7 +2293,6 @@ Begin Window MainWindow
       DarkModeToggledMask=   0
       DarkModeToggledMaskColor=   &c00000000
       DarkModeToggledPicture=   0
-      DoubleBuffer    =   False
       Down            =   True
       DownCursor      =   6
       DownToggled     =   False
@@ -2392,6 +2392,7 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   0
+      CurrentPic      =   0
       DarkModeDisabledMaskColor=   &c00000000
       DarkModeDisabledOverlayColor=   &c000000FF
       DarkModeDownColor=   &cC8000000
@@ -2418,7 +2419,6 @@ Begin Window MainWindow
       DarkModeToggledMask=   0
       DarkModeToggledMaskColor=   &c00000000
       DarkModeToggledPicture=   0
-      DoubleBuffer    =   False
       Down            =   True
       DownCursor      =   6
       DownToggled     =   False
@@ -2582,6 +2582,7 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   0
+      CurrentPic      =   0
       DarkModeDisabledMaskColor=   &c00000000
       DarkModeDisabledOverlayColor=   &c000000FF
       DarkModeDownColor=   &cC8000000
@@ -2608,7 +2609,6 @@ Begin Window MainWindow
       DarkModeToggledMask=   0
       DarkModeToggledMaskColor=   &c00000000
       DarkModeToggledPicture=   0
-      DoubleBuffer    =   False
       Down            =   True
       DownCursor      =   6
       DownToggled     =   False
@@ -2673,6 +2673,7 @@ Begin Window MainWindow
       ArcWidth        =   0
       Backdrop        =   0
       ButtonStyle     =   0
+      CurrentPic      =   0
       DarkModeDisabledMaskColor=   &c00000000
       DarkModeDisabledOverlayColor=   &c000000FF
       DarkModeDownColor=   &cC8000000
@@ -2699,7 +2700,6 @@ Begin Window MainWindow
       DarkModeToggledMask=   0
       DarkModeToggledMaskColor=   &c00000000
       DarkModeToggledPicture=   0
-      DoubleBuffer    =   False
       Down            =   True
       DownCursor      =   6
       DownToggled     =   False
@@ -2897,7 +2897,7 @@ End
 		Sub TextChange()
 		  If Self.AllSet Then
 		    PreviewCCBtn.ArcWidth = Me.Text.Val
-		    PreviewCCBtn.Invalidate
+		    PreviewCCBtn.Refresh(False)
 		  End if
 		End Sub
 	#tag EndEvent
@@ -2912,7 +2912,7 @@ End
 		Sub TextChange()
 		  If Self.AllSet Then
 		    PreviewCCBtn.ArcHeight = Me.Text.Val
-		    PreviewCCBtn.Invalidate
+		    PreviewCCBtn.Refresh(False)
 		  End if
 		End Sub
 	#tag EndEvent
@@ -2941,7 +2941,7 @@ End
 		    If Me.SelectedRowIndex < 2 Then
 		      PreviewCCBtn.Enabled = True
 		    End if
-		    PreviewCCBtn.Invalidate
+		    PreviewCCBtn.Refresh(False)
 		  End if
 		End Sub
 	#tag EndEvent
@@ -3013,21 +3013,21 @@ End
 #tag EndEvents
 #tag Events EnableDownStatusCCBtn
 	#tag Event
-		Sub Open()
+		Sub Action()
+		  If Self.AllSet Then
+		    PreviewCCBtn.Down = Me.Active
+		  End if
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Opening()
 		  If PreviewCCBtn.Down Then
 		    Me.Active = True
 		    Me.Status = cCanvasButton.IconStatus.Toggled
 		  End if
 		  
 		  
-		  Me.Invalidate
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub Action()
-		  If Self.AllSet Then
-		    PreviewCCBtn.Down = Me.Active
-		  End if
+		  Me.ComposePic()
 		End Sub
 	#tag EndEvent
 #tag EndEvents
@@ -3064,96 +3064,96 @@ End
 #tag EndEvents
 #tag Events EnableHoverStatusCCBtn
 	#tag Event
-		Sub Open()
-		  If PreviewCCBtn.Hover Then
-		    Me.Active = True
-		    Me.Status = cCanvasButton.IconStatus.Toggled
-		  End if
-		  
-		  
-		  Me.Invalidate
-		End Sub
-	#tag EndEvent
-	#tag Event
 		Sub Action()
 		  If Self.AllSet Then
 		    PreviewCCBtn.Hover = Me.Active
 		  End if
 		End Sub
 	#tag EndEvent
+	#tag Event
+		Sub Opening()
+		  If PreviewCCBtn.Hover Then
+		    Me.Active = True
+		    Me.Status = cCanvasButton.IconStatus.Toggled
+		  End if
+		  
+		  
+		  Me.ComposePic()
+		End Sub
+	#tag EndEvent
 #tag EndEvents
 #tag Events EnableToggledCCBtn
 	#tag Event
-		Sub Open()
+		Sub Action()
+		  If Self.AllSet Then
+		    PreviewCCBtn.Toggled = Me.Active
+		    //Need to Refresh(False) the PreviewCCBtn because there is no event doing it
+		    If Me.Active Then
+		      If PreviewCCBtn.Active Then PreviewCCBtn.Status = cCanvasButton.IconStatus.Toggled
+		    End if
+		    If Not Me.Active Then PreviewCCBtn.Status = cCanvasButton.IconStatus.Normal
+		  End if
+		  PreviewCCBtn.Refresh(False)
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Opening()
 		  If PreviewCCBtn.Toggled Then
 		    Me.Active = True
 		    Me.Status = cCanvasButton.IconStatus.Toggled
 		  End if
 		  
 		  
-		  Me.Invalidate
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub Action()
-		  If Self.AllSet Then
-		    PreviewCCBtn.Toggled = Me.Active
-		    //Need to invalidate the PreviewCCBtn because there is no event doing it
-		    If Me.Active Then
-		      If PreviewCCBtn.Active Then PreviewCCBtn.Status = cCanvasButton.IconStatus.Toggled
-		    End if
-		    If Not Me.Active Then PreviewCCBtn.Status = cCanvasButton.IconStatus.Normal
-		  End if
-		  PreviewCCBtn.Invalidate
+		  Me.ComposePic()
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events ActiveCCBtn
 	#tag Event
-		Sub Open()
+		Sub Action()
+		  If Self.AllSet Then
+		    PreviewCCBtn.Active = Me.Active
+		    //Need to Refresh(False) the PreviewCCBtn because there is no event doing it
+		    If PreviewCCBtn.Active And PreviewCCBtn.Toggled Then
+		      PreviewCCBtn.Status = cCanvasButton.IconStatus.Toggled
+		    Else
+		      PreviewCCBtn.Status = cCanvasButton.IconStatus.Normal
+		    End if
+		    PreviewCCBtn.ComposePic()
+		  End if
+		  
+		  
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Opening()
 		  If PreviewCCBtn.Active Then
 		    Me.Active = True
 		    Me.Status = cCanvasButton.IconStatus.Toggled
 		  End if
 		  
 		  
-		  Me.Invalidate
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub Action()
-		  If Self.AllSet Then
-		    PreviewCCBtn.Active = Me.Active
-		    //Need to invalidate the PreviewCCBtn because there is no event doing it
-		    If PreviewCCBtn.Active And PreviewCCBtn.Toggled Then
-		      PreviewCCBtn.Status = cCanvasButton.IconStatus.Toggled
-		    Else
-		      PreviewCCBtn.Status = cCanvasButton.IconStatus.Normal
-		    End if
-		    PreviewCCBtn.Invalidate
-		  End if
-		  
-		  
+		  Me.Refresh(False)
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events EnabledCCBtn
 	#tag Event
-		Sub Open()
+		Sub Action()
+		  If Self.AllSet Then
+		    PreviewCCBtn.Enabled = Me.Active
+		  End if
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Opening()
 		  If PreviewCCBtn.Enabled Then
 		    Me.Active = True
 		    Me.Status = cCanvasButton.IconStatus.Toggled
 		  End if
 		  
 		  
-		  Me.Invalidate
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub Action()
-		  If Self.AllSet Then
-		    PreviewCCBtn.Enabled = Me.Active
-		  End if
+		  Me.ComposePic()
 		End Sub
 	#tag EndEvent
 #tag EndEvents
@@ -3167,7 +3167,7 @@ End
 		    Else
 		      ActiveCCBtn.Status = cCanvasButton.IconStatus.Normal
 		    End if
-		    ActiveCCBtn.Invalidate
+		    ActiveCCBtn.ComposePic()
 		  End if
 		End Sub
 	#tag EndEvent
@@ -3217,7 +3217,7 @@ End
 		      
 		    End Select
 		    
-		    PreviewCCBtn.Invalidate
+		    PreviewCCBtn.ComposePic()
 		    Self.ButtonModePopupMenu.SelectedRowIndex = 0
 		    Self.PicturePopUpMenu.SelectedRowIndex = 0
 		    
@@ -3231,42 +3231,42 @@ End
 #tag EndEvents
 #tag Events EnableHoverToggledCCBtn
 	#tag Event
-		Sub Open()
+		Sub Action()
+		  If Self.AllSet Then
+		    PreviewCCBtn.HoverToggled = Me.Active
+		    PreviewCCBtn.Refresh(False)
+		  End if
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Opening()
 		  If PreviewCCBtn.HoverToggled Then
 		    Me.Active = True
 		    Me.Status = cCanvasButton.IconStatus.Toggled
 		  End if
 		  
-		  Me.Invalidate
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub Action()
-		  If Self.AllSet Then
-		    PreviewCCBtn.HoverToggled = Me.Active
-		    PreviewCCBtn.Invalidate
-		  End if
+		  Me.ComposePic()
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events EnableDownToggledCCBtn
 	#tag Event
-		Sub Open()
+		Sub Action()
+		  If Self.AllSet Then
+		    PreviewCCBtn.DownToggled = Me.Active
+		    PreviewCCBtn.Refresh(False)
+		  End if
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Opening()
 		  If PreviewCCBtn.DownToggled Then
 		    Me.Active = True
 		    Me.Status = cCanvasButton.IconStatus.Toggled
 		  End if
 		  
 		  
-		  Me.Invalidate
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub Action()
-		  If Self.AllSet Then
-		    PreviewCCBtn.DownToggled = Me.Active
-		    PreviewCCBtn.Invalidate
-		  End if
+		  Me.ComposePic()
 		End Sub
 	#tag EndEvent
 #tag EndEvents
@@ -3280,7 +3280,7 @@ End
 		Sub TextChange()
 		  If Self.AllSet Then
 		    PreviewCCBtn.Left = Me.Text.Val
-		    PreviewCCBtn.Invalidate
+		    PreviewCCBtn.Refresh(False)
 		  End if
 		End Sub
 	#tag EndEvent
@@ -3295,7 +3295,7 @@ End
 		Sub TextChange()
 		  If Self.AllSet Then
 		    PreviewCCBtn.Top = Me.Text.Val
-		    PreviewCCBtn.Invalidate
+		    PreviewCCBtn.Refresh(False)
 		  End if
 		End Sub
 	#tag EndEvent
@@ -3310,7 +3310,7 @@ End
 		Sub TextChange()
 		  If Self.AllSet Then
 		    PreviewCCBtn.Width = Me.Text.Val
-		    PreviewCCBtn.Invalidate
+		    PreviewCCBtn.Refresh(False)
 		  End if
 		End Sub
 	#tag EndEvent
@@ -3325,7 +3325,7 @@ End
 		Sub TextChange()
 		  If Self.AllSet Then
 		    PreviewCCBtn.Height = Me.Text.Val
-		    PreviewCCBtn.Invalidate
+		    PreviewCCBtn.Refresh(False)
 		  End if
 		End Sub
 	#tag EndEvent
@@ -3649,7 +3649,7 @@ End
 		      
 		    End Select
 		    
-		    PreviewCCBtn.Invalidate
+		    PreviewCCBtn.ComposePic()
 		    Self.ButtonModePopupMenu.SelectedRowIndex = 0
 		    Self.MaskPopUpMenu.SelectedRowIndex = 0
 		    

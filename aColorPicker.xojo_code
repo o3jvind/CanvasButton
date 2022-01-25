@@ -24,7 +24,7 @@ Inherits DesktopColorPicker
 		      If TheProperties(i).Name = ColorProp Then //found the property to change
 		        prop = TheProperties(i)
 		        prop.Value(MainWindow.PreviewCCBtn) = SelectedColor
-		        MainWindow.PreviewCCBtn.Invalidate
+		        MainWindow.PreviewCCBtn.ComposePic()
 		      End if
 		    Next
 		    
@@ -37,7 +37,7 @@ Inherits DesktopColorPicker
 		      If TheProperties(i).Name = ColorProp Then //found the property to change
 		        prop = TheProperties(i)
 		        prop.Value(MainWindow.PreviewCCBtn) = SelectedColor
-		        MainWindow.PreviewCCBtn.Invalidate
+		        MainWindow.PreviewCCBtn.ComposePic()
 		      End if
 		    Next
 		    
@@ -47,7 +47,7 @@ Inherits DesktopColorPicker
 		      If TheProperties(i).Name = "LightModeDisabledOverlayColor" Then 
 		        prop = TheProperties(i)
 		        prop.Value(MainWindow.PreviewCCBtn) = SelectedColor
-		        MainWindow.PreviewCCBtn.Invalidate
+		        MainWindow.PreviewCCBtn.ComposePic()
 		      End if
 		    Next
 		    
@@ -58,7 +58,7 @@ Inherits DesktopColorPicker
 		      If TheProperties(i).Name = "DarkModeDisabledOverlayColor" Then
 		        prop = TheProperties(i)
 		        prop.Value(MainWindow.PreviewCCBtn) = SelectedColor
-		        MainWindow.PreviewCCBtn.Invalidate
+		        MainWindow.PreviewCCBtn.ComposePic()
 		      End if
 		    Next
 		    
@@ -69,7 +69,7 @@ Inherits DesktopColorPicker
 		      If TheProperties(i).Name = "LightModeDisabledMaskColor" Then 
 		        prop = TheProperties(i)
 		        prop.Value(MainWindow.PreviewCCBtn) = SelectedColor
-		        MainWindow.PreviewCCBtn.Invalidate
+		        MainWindow.PreviewCCBtn.ComposePic()
 		      End if
 		    Next
 		    
@@ -81,7 +81,7 @@ Inherits DesktopColorPicker
 		        
 		        prop = TheProperties(i)
 		        prop.Value(MainWindow.PreviewCCBtn) = SelectedColor
-		        MainWindow.PreviewCCBtn.Invalidate
+		        MainWindow.PreviewCCBtn.ComposePic()
 		      End if
 		    Next
 		    
