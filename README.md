@@ -22,4 +22,8 @@ The mouse cursor can be set for Hover and Down.
 
 Everything can be configured in the IDE or during runtime.
 
-![alt text](https://github.com/o3jvind/CanvasButton/blob/main/Pix/canvas-button.jpg?raw=true)
+This repo holds the control and a project that shows some of the possibilities of cCanvasButton.
+
+In this GIF you can see how to create a transparent and colored button with a black and white alpha file.
+
+![out](https://user-images.githubusercontent.com/1135350/151110419-c69984d6-5571-4d6e-be46-340573f42b45.gif)
